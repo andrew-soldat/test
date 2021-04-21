@@ -302,12 +302,7 @@ main {
 }
 .main {
 	height: 840px;
-	// padding: 50% 0px 0px 0px;
-	background: url('./images/main2.jpg') center no-repeat;
-	// img {
-	// 	max-width: 100%;
-	// 	object-fit: cover;
-	// }
+	background: url('./images/main-bg-1.jpg') center no-repeat;
 
 	@media (max-width: 1200px) {
 		// height: 0;
@@ -317,18 +312,19 @@ main {
 
 	@media (max-width: 768px) {
 		height: 439px;
-		background: url('./images/main222.jpg') 21% center no-repeat;
+		background: url('./images/main-bg-2.jpg') 27% center no-repeat;
 	}
 }
 .program {
-	margin: 110px 0px -30px 0px;
+	margin: 80px 0px -30px 0px;
+	padding: 30px 0px 0px 0px;
 
 	@media (max-width: 768px) {
-		margin: 80px 0px -30px 0px;
+		margin: 50px 0px -30px 0px;
 	}
 
 	@media (max-width: 565px) {
-		margin: 50px 0px -30px 0px;
+		margin: 20px 0px -30px 0px;
 	}
 
 	&__title {
@@ -449,7 +445,7 @@ main {
 
 	&__column {
 		padding: 0px 15px 30px;
-		flex: 0 1 240px;
+		flex: 0 1 280px;
 		text-align: center;
 
 		&:nth-child(even) {
@@ -491,7 +487,7 @@ main {
 	background: url('./images/experts-bg.png') bottom center no-repeat;
 
 	@media (max-width: 768px) {	
-		padding: 0px 0px 80px 0px;
+		padding: 20px 0px 80px 0px;
 	}
 
 	&__title {
@@ -512,6 +508,7 @@ main {
 .item-expert {
 	padding: 15px 20px 20px;
 	box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -532,6 +529,7 @@ main {
 }
 .registration {
 	margin: -45px 0px 0px 0px;
+	padding: 30px 0px 0px 0px;
 
 	&__title {
 	}
@@ -623,14 +621,14 @@ main {
 
 	&__subtitle {
 		margin: 0px 0px 10px 0px;
-		font-size: 16px;
+		font-size: 17px;
 		color: #263238;
 		font-weight: 700;
 	}
 
 	&__text {
 		margin: 0px 0px 10px 0px;
-		font-size: 14px;
+		font-size: 18px;
 		font-weight: 600;
 		color: #006C4F;
 	}
@@ -641,7 +639,7 @@ main {
 	&__item {
 		padding: 0px 0px 0px 12px;
 		margin: 0px 0px 15px 0px;
-		font-size: 12px;
+		font-size: 16px;
 		font-weight: 600;
 		color: #F5F1F3;
 		position: relative;
@@ -943,7 +941,7 @@ main {
 		padding: 0px 0px 0px 20px;
 		margin: 0px 0px 25px 0px;
 		background: url('./images/i.svg') left center no-repeat;
-		font-size: 9px;
+		font-size: 13px;
 		font-weight: 300;
 		color: #223B52;
 	}
