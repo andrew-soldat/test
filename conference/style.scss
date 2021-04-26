@@ -940,10 +940,29 @@ main {
 	&__agree {
 		padding: 0px 0px 0px 20px;
 		margin: 0px 0px 25px 0px;
-		background: url('./images/i.svg') left center no-repeat;
+		background: url('./images/i.svg') left center / 15px no-repeat;
 		font-size: 13px;
 		font-weight: 300;
 		color: #223B52;
+	}
+
+	&__thanks {
+		display: none;
+		padding: 10px;
+		margin: 0px 0px 20px 0px;
+		background-color: #006c4f38;
+		border-left: 3px solid #006C4F;
+		font-size: 18px;
+		color:#000;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease 0s;
+
+		&.show {
+			display: block;
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 
 	&__button {

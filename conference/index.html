@@ -255,7 +255,7 @@
                               </li>
                            </ul>
                         </div>
-                        <button class="item-registration__button btn-form">
+                        <button class="item-registration__button btn-form" data-value="VIP">
                            Выбрать
                         </button>
                      </div>
@@ -289,7 +289,7 @@
                               </li>
                            </ul>
                         </div>
-                        <button class="item-registration__button btn-form">
+                        <button class="item-registration__button btn-form" data-value="Standart">
                            Выбрать
                         </button>
                      </div>
@@ -321,7 +321,7 @@
                               </li>
                            </ul>
                         </div>
-                        <button class="item-registration__button btn-form">
+                        <button class="item-registration__button btn-form" data-value="Ekonom">
                            Выбрать
                         </button>
                      </div>
@@ -332,74 +332,6 @@
                </div>
             </div>
          </section>
-         <div class="popup" id="popup_form">
-            <div class="popup__body">
-               <div class="popup__content">
-                  <a class="popup__close" href="">✖</a>
-                  <h4 class="popup__title">Запись на Конференцию</h4>
-                  <div class="popup__text">
-                     Тема: “Современный взгляд на организацию расчетов при
-                     продаже товаров ( выполнении работ, оказании услуг):
-                     достоверное и надежное от разработчиков”
-                  </div>
-                  <div class="popup__text">Дата проведения: 30.04.2021</div>
-                  <div class="popup__package">Выбранный пакет: “VIP”</div>
-						<form id="form-registration" action="#" class="form">
-							<div class="form__line">
-								<input
-									type="text"
-									id="name"
-									class="form__input _required"
-								/><div class="form__placeholder">Ваше ФИО *</div>
-								
-								<div class="form__text-error">Обязательное поле</div>
-							</div>
-							<div class="form__line">
-								<input
-									type="text"
-									id="email"
-									class="form__input _required _email"
-								/>
-								<div class="form__placeholder">Ваш E-mail *</div>
-								<div class="form__text-error">Обязательное поле</div>
-							</div>
-							<div class="form__line">
-								<input
-									type="tel"
-									id="phone"
-									class="form__input _required"
-								/>
-								<div class="form__placeholder">Мобильный телефон *</div>
-								<div class="form__text-error">Обязательное поле</div>
-							</div>
-							<div class="form__line">
-								<input
-									type="phone"
-									id="unp"
-									class="form__input _required"
-								/>
-								<div class="form__placeholder">УНП *</div>
-								<div class="form__text-error">Обязательное поле</div>
-							</div>
-							<div class="form__line">
-								<input
-									type="text"
-									id="message"
-									class="form__input _required"
-								/>
-								<div class="form__placeholder">Сообщение *</div>
-								<div class="form__text-error">Обязательное поле</div>     
-							</div>
-							<div class="form__agree">
-								Нажимая на кнопку “Записаться”, вы даете согласие на сбор, обработку, хранение и использование персоналдьных данных.
-							</div>
-							<button type="submit" class="form__button">
-								Записаться
-							</button>
-						</form>
-               </div>
-            </div>
-         </div>
       </main>
       <footer id="footer" class="footer">
          <div class="container">
@@ -438,12 +370,12 @@
                   </div>
                   <div class="footer__social social">
                      <a
-                        href="https://www.instagram.com/info_center_by/"
+                        href="https://www.instagram.com/info_center_by/" target="_blank"
                         class="social__link social__link_instagram footer__link"
                         >info_center_by</a
                      >
                      <a
-                        href="https://www.facebook.com/iicns"
+                        href="https://www.facebook.com/iicns" target="_blank"
                         class="social__link social__link_facebook footer__link"
                         >facebook.com/iicns</a
                      >
@@ -452,6 +384,82 @@
             </div>
          </div>
       </footer>
+		<div class="popup" id="popup_form">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a class="popup__close" href="">✖</a>
+					<h4 class="popup__title">Запись на Конференцию</h4>
+					<div class="popup__text">
+						Тема: “Современный взгляд на организацию расчетов при
+						продаже товаров ( выполнении работ, оказании услуг):
+						достоверное и надежное от разработчиков”
+					</div>
+					<div class="popup__text">Дата проведения: 30.04.2021</div>
+					<div class="popup__package">Выбранный пакет: <span id="textChoosePackege"></span></div>
+					<form id="form-registration" action="#" class="form">
+						<input type="hidden" id="valuePackage" value="">
+						<div class="form__line">
+							<input
+								type="text"
+								name="name"
+								id="name"
+								class="form__input _required"
+							/><div class="form__placeholder">Ваше ФИО *</div>
+							
+							<div class="form__text-error">Обязательное поле</div>
+						</div>
+						<div class="form__line">
+							<input
+								type="text"
+								name="email"
+								id="email"
+								class="form__input _required _email"
+							/>
+							<div class="form__placeholder">Ваш E-mail *</div>
+							<div class="form__text-error">Обязательное поле</div>
+						</div>
+						<div class="form__line">
+							<input
+								type="tel"
+								name="phone"
+								id="phone"
+								class="form__input _required"
+							/>
+							<div class="form__placeholder">Мобильный телефон *</div>
+							<div class="form__text-error">Обязательное поле</div>
+						</div>
+						<div class="form__line">
+							<input
+								type="text"
+								name="unp"
+								id="unp"
+								class="form__input _required"
+							/>
+							<div class="form__placeholder">УНП *</div>
+							<div class="form__text-error">Обязательное поле</div>
+						</div>
+						<div class="form__line">
+							<input
+								type="text"
+								name="message"
+								id="message"
+								class="form__input _required"
+							/>
+							<div class="form__placeholder">Сообщение *</div>
+							<div class="form__text-error">Обязательное поле</div>     
+						</div>
+						<div class="form__agree">
+							Нажимая на кнопку “Записаться”, вы даете согласие на сбор, обработку, хранение и использование персоналдьных данных.
+						</div>
+						<div class="form__thanks">Спасибо! Ваша заявка принята.</div>
+						<button class="ffff"style="width: 30px;background-color: #000;height: 30px"></button>
+						<button type="submit" class="form__button">
+							Записаться
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="./jquery.maskedinput.min.js"></script>
       <script src="./app.js"></script>

@@ -36,17 +36,22 @@ links.forEach((link) => {
    });
 });
 
-const formButton = document.querySelectorAll('.btn-form'),
+const formButtons = document.querySelectorAll('.btn-form'),
    popupForm = document.querySelector('.popup'),
-   popupCloseButton = document.querySelector('.popup__close');
+   popupCloseButton = document.querySelector('.popup__close'),
+   form = document.getElementById('form-registration'),
+   valuePackage = document.getElementById('valuePackage'),
+   textChoosePackege = document.getElementById('textChoosePackege');
 
 const closePopup = () => {
    popupForm.classList.remove('open');
    body.classList.remove('lock');
 };
 
-formButton.forEach((item) => {
+formButtons.forEach((item) => {
    item.addEventListener('click', function () {
+		form.valuePackage.value = item.dataset.value;
+		textChoosePackege.innerHTML = `«${item.dataset.value}»`;
       popupForm.classList.add('open');
       body.classList.add('lock');
    });
@@ -74,9 +79,19 @@ $(function () {
    $('#unp').mask('999999999');
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-   let form = document.getElementById('form-registration');
+const blockThanks = document.querySelector('.form__thanks');
+const btnF = document.querySelector('.ffff');
 
+btnF.addEventListener('click', function (e) {
+	console.log('fff');
+	blockThanks.classList.add("show");
+	setTimeout(function () {
+		blockThanks.classList.remove("show");
+	},10000)
+	
+})
+
+document.addEventListener('DOMContentLoaded', function () {
    form.addEventListener('submit', formSend);
 
    async function formSend(e) {
