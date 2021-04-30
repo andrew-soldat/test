@@ -1054,9 +1054,12 @@ h6 {
       background-color: #93c1f9;
    }
 
+   &__body {
+      background-color: #fff;
+   }
+
    &__documents {
       padding: 30px 20px;
-      background-color: #fff;
    }
 
    &__item {
@@ -1078,42 +1081,202 @@ h6 {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      background-color: #fff;
    }
 
    &__archive {
-		padding: 0px 12px 0px 0px;
+      padding: 0px 12px 0px 0px;
       margin: 0px 0px 20px 20px;
       font-size: 20px;
       color: #2b8aff;
       font-weight: 500;
       transition: all 0.3s ease 0s;
-		position: relative;
+      position: relative;
 
-		&:before {
-			content:'';
-			width: 9px;
-			height: 9px;
-			border-top: 2px solid #2b8aff;
-			border-right: 2px solid #2b8aff;
-			transform: rotate(45deg) translateY(-50%);
-			position: absolute;
-			top: 50%;
-			right: 0;
-			transition: all 0.3s ease 0s;
-		}
+      &:before {
+         content: '';
+         width: 9px;
+         height: 9px;
+         border-top: 2px solid #2b8aff;
+         border-right: 2px solid #2b8aff;
+         transform: rotate(45deg) translateY(-50%);
+         position: absolute;
+         top: 50%;
+         right: 0;
+         transition: all 0.3s ease 0s;
+      }
 
       &:hover {
          color: #005fd3;
 
-			&:before {
-				border-color: #005fd3;
-				right: -5px;
-			}
+         &:before {
+            border-color: #005fd3;
+            right: -5px;
+         }
       }
    }
 
    &__image {
+   }
+}
+.sorting {
+	padding: 0 20px;
+	height: 41px;
+	background-color: #EDF5FF;
+	display: flex;
+	align-items: center;
+
+	&__heading {
+		padding: 0px 20px 0px 28px;
+		font-size: 16px;
+		font-weight: 500;
+		background: url('../images/sort.svg') left no-repeat;
+	}
+
+	&__title {
+		margin: 11px 12px;
+		padding: 0px 22px 0px 0px;
+		font-size: 14px;
+		cursor: pointer;
+		position: relative;
+
+		&:before {
+			content:'';
+         width: 9px;
+         height: 9px;
+         border-top: 2px solid #343434;
+         border-right: 2px solid #343434;
+         transform: rotate(135deg);
+         position: absolute;
+         top: 3px;
+         right: 0;
+         transition: all 0.3s ease 0s;
+		}
+
+		&.active {
+			&:before {
+				top: 8px;
+				transform: rotate(-45deg);
+			}
+			.search {
+				display: block;
+			}
+		}
+	}
+}
+.search {
+	display: none;
+	padding: 20px 50px 20px 20px ;
+	background-color: #fff;
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.13);
+	position: absolute;
+	top: 29px;
+	right: -13px;
+
+	&__list {
+
+		li {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	&__input {
+		display: none;
+
+		&:checked + .date__label:after {
+			transform: rotate(-50deg) scale(1);
+		}
+	}
+
+	&__label {
+		font-size: 16px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		&:before {
+			margin: 0px 20px 0px 0px;
+			content:'';
+			align-self: flex-start;
+			flex: 0 0 18px;
+			height: 18px;
+			background-color: transparent;
+			border: 1px solid #343434;
+		}
+
+		&:after {
+			content:'';
+         position: absolute;
+         left: 4px;
+         top: 4px;
+         width: 10px;
+         height: 7px;
+         border-left: 2px solid #343434;
+         border-bottom: 2px solid #343434;
+         transform: rotate(-50deg) scale(0);
+			transition: all 0.3s ease 0s;
+		}
+	}
+}
+
+.name {
+}
+
+.pagging {
+   padding: 0px 20px 30px;
+   display: flex;
+   justify-content: space-between;
+
+   a {
+      color: #343434;
+      font-size: 18px;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+         color: #000;
+      }
+   }
+
+   &__start {
+   }
+
+   &__navi {
+      display: flex;
+   }
+
+   &__arrow {
+      width: 8px;
+      height: 8px;
+      border-right: 1px solid #343434;
+      border-top: 1px solid #343434;
+
+		&:hover {
+			border-color: #000;
+		}
+
+      &_prev {
+         transform: rotate(-135deg) translate(-4px, -5px);
+      }
+
+      &_next {
+         transform: rotate(45deg) translate(4px, 5px);
+      }
+   }
+
+   &__list {
+      display: flex;
+
+      li {
+         margin: 0 9px;
+      }
+   }
+
+   &__item {
+
+		&.active {
+			text-decoration: underline;
+			font-weight: 700;
+		}
    }
 }
 .contacts {
