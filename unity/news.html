@@ -8,7 +8,13 @@
          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
          rel="stylesheet"
       />
-      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="./assets/css/slick-theme.css"
+      />
+      <link rel="stylesheet" href="./assets/css/style.css" />
       <title>Единство</title>
    </head>
    <body>
@@ -16,7 +22,7 @@
          <div class="container">
             <div class="header__body">
                <a href="index.html" class="logo"
-                  ><img src="./images/logo.png" alt="Логотип" />
+                  ><img src="./assets/images/logo.png" alt="Логотип" />
                   <span
                      >Объединенная отраслевая профсоюзная организация работников
                      налоговых и других финансовых органов Белорусского
@@ -42,10 +48,12 @@
                         >
                      </li>
                      <li>
-                        <a href="" class="header__link link">Документы</a>
+                        <a href="documents.html" class="header__link link">Документы</a>
                      </li>
                      <li>
-                        <a href="contacts.html" class="header__link link">Контакты</a>
+                        <a href="contacts.html" class="header__link link"
+                           >Контакты</a
+                        >
                      </li>
                   </ul>
                </nav>
@@ -65,114 +73,248 @@
                <div data-speed="70" class="main__bg main__bg_2"></div>
                <div data-speed="140" class="main__bg main__bg_3"></div>
                <div class="container">
-                  <div class="last-new">
-                     <div class="last-new__article">
-                        <div class="last-new__city">Минск</div>
-								<div class="last-new__content">
-									<div class="last-new__top">
-										<h5 class="last-new__title">Поход с палатками</h5>
-										<div class="last-new__date">20.05.2021</div>
-									</div>
-									<div class="last-new__text">
-										<p>
-											Поход с палатками – классика активного туризма. Мы
-											любим провожать закаты и встречать рассветы на
-											природе в самых красивых местах мира и готовы
-											разделить эту радость с вами. Записывайтесь в
-											поход с ночевками в палатках и погрузитесь в
-											романтику пешего туризма.
-										</p>
-										<p>
-											В путешествии участники сами организуют сервис:
-											готовят еду на костре, моют посуду, собирают
-											палатки под контролем инструкторов. Продукты
-											добывать не придется – мы предлагаем поход с
-											палатками, а не экстрим-тур для выживальщиков.
-										</p>
-									</div>
+                  <div class="main__body">
+                     <div class="last-new">
+                        <div class="last-new__article">
+                           <div class="last-new__header">Последняя новость</div>
+                           <div class="last-new__content">
+                              <div class="last-new__top">
+                                 <h5 class="last-new__title">
+                                    Возложение цветов
+                                 </h5>
+                                 <div class="last-new__date">20.05.2021</div>
+                              </div>
+                              <div class="last-new__text">
+                                 <p>
+                                    Поход с палатками – классика активного
+                                    туризма. Мы любим провожать закаты и
+                                    встречать рассветы на природе в самых
+                                    красивых местах мира и готовы разделить эту
+                                    радость с вами. Записывайтесь в поход с
+                                    ночевками в палатках и погрузитесь в
+                                    романтику пешего туризма.
+                                 </p>
+                                 <p>
+                                    В путешествии участники сами организуют
+                                    сервис: готовят еду на костре, моют посуду,
+                                    собирают палатки под контролем инструкторов.
+                                    Продукты добывать не придется – мы
+                                    предлагаем поход с палатками, а не
+                                    экстрим-тур для выживальщиков.
+                                 </p>
+                              </div>
 
-									<div class="last-new__image">
-										<img src="./images/main-new.png" alt="" />
-									</div>
-								</div>
-								
-                     </div>
-                     <div class="last-new__photo">
-                        <div class="last-new__slider">
-                           <img src="./images/new-slider-01.jpg" alt="" />
+                              <div class="last-new__image">
+                                 <img
+                                    src="./assets/images/main-new.png"
+                                    alt=""
+                                 />
+                              </div>
+                           </div>
+                        </div>
+                        <div class="last-new__photo slider-last-new">
+                           <img src="./assets/images/photo-news/13.jpg" alt="">
                         </div>
                      </div>
                   </div>
                </div>
             </div>
          </section>
-         <section class="news-region bg">
+         <section class="news bg">
             <div class="container">
                <h2 class="title">
                   <span>Другие новости</span>
                </h2>
-					<div class="news-region__body">
-						<div class="news-region__item">
-							<a href=""class="news-region__image">
-								<img src="./images/photo-news/01.jpg" alt="Фото">
-							</a>
-							<a href="" class="news-region__title">Конкурс творчества</a>
-							<div class="news-region__date">23.04.2021</div>
-						</div>
-						<div class="news-region__item">
-							<a href=""class="news-region__image">
-								<img src="./images/photo-news/02.jpg" alt="Фото">
-							</a>
-							<a href="" class="news-region__title">Конкурс творчества</a>
-							<div class="news-region__date">23.04.2021</div>
-						</div>
-						<div class="news-region__item">
-							<a href=""class="news-region__image">
-								<img src="./images/photo-news/03.jpg" alt="Фото">
-							</a>
-							<a href="" class="news-region__title">Конкурс творчества</a>
-							<div class="news-region__date">23.04.2021</div>
-						</div>
-						<div class="news-region__item">
-							<a href=""class="news-region__image">
-								<img src="./images/photo-news/04.jpg" alt="Фото">
-							</a>
-							<a href="" class="news-region__title">Конкурс творчества</a>
-							<div class="news-region__date">23.04.2021</div>
-						</div>
-						<div class="news-region__item">
-							<a href=""class="news-region__image">
-								<img src="./images/photo-news/05.jpg" alt="Фото">
-							</a>
-							<a href="" class="news-region__title">Конкурс творчества</a>
-							<div class="news-region__date">23.04.2021</div>
-						</div>
-						<div class="news-region__item">
-							<a href=""class="news-region__image">
-								<img src="./images/photo-news/06.jpg" alt="Фото">
-							</a>
-							<a href="" class="news-region__title">Конкурс творчества</a>
-							<div class="news-region__date">23.04.2021</div>
-						</div>
-						<div class="news-region__item">
-							<a href=""class="news-region__image">
-								<img src="./images/photo-news/07.jpg" alt="Фото">
-							</a>
-							<a href="" class="news-region__title">Конкурс творчества</a>
-							<div class="news-region__date">23.04.2021</div>
-						</div>
-						<div class="news-region__item">
-							<a href=""class="news-region__image">
-								<img src="./images/photo-news/08.jpg" alt="Фото">
-							</a>
-							<a href="" class="news-region__title">Конкурс творчества</a>
-							<div class="news-region__date">23.04.2021</div>
-						</div>
-						
-							
-						
-					</div>
-					
+               <div class="news__slider">
+                  <div>
+                     <div class="news__slide">
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/01.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/02.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/03.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/04.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/05.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/06.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/07.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/08.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="news__slide">
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/01.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/02.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/03.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/04.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/05.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/06.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                        <div class="news__item">
+                           <a href="" class="news__image">
+                              <img
+                                 src="./assets/images/photo-news/07.jpg"
+                                 alt="Фото"
+                              />
+                           </a>
+                           <a href="" class="news__title"
+                              >Конкурс творчества</a
+                           >
+                           <div class="news__date">23.04.2021</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </section>
       </main>
@@ -199,7 +341,7 @@
                </div>
             </div>
             <a href="" class="logo"
-               ><img src="./images/logo.png" alt="Логотип" />
+               ><img src="./assets/images/logo.png" alt="Логотип" />
                <span
                   >Объединенная отраслевая профсоюзная организация работников
                   налоговых и других финансовых органов Белорусского
@@ -215,6 +357,7 @@
          </div>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="./main.js"></script>
+      <script src="./assets/js/slick.min.js"></script>
+      <script src="./assets/js/main.js"></script>
    </body>
 </html>
