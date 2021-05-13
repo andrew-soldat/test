@@ -1,4 +1,4 @@
-const imgItems = document.querySelectorAll('.main__bg'),
+const imgItems = document.querySelectorAll('.content__bg'),
    titlesFilter = document.querySelectorAll('.filter__title'),
    body = document.querySelector('body'),
    header = document.querySelector('header'),
@@ -35,8 +35,6 @@ document.addEventListener('click', function(e){
 	}
 })
 
-
-
 function parallax(e) {
    imgItems.forEach((item) => {
       let speed = item.getAttribute('data-speed');
@@ -46,36 +44,7 @@ function parallax(e) {
    });
 }
 
-document.addEventListener('mousemove', parallax);
-
-var a = 0;
-$(window).scroll(function () {
-   var oTop = $('.number__item').offset().top - window.innerHeight;
-   if (a == 0 && $(window).scrollTop() > oTop) {
-      $('.number__count').each(function () {
-         var $this = $(this),
-            countTo = $this.attr('data-count');
-         $({
-            countNum: $this.text(),
-         }).animate(
-            {
-               countNum: countTo,
-            },
-            {
-               duration: 1500,
-               easing: 'swing',
-               step: function () {
-                  $this.text(Math.floor(this.countNum));
-               },
-               complete: function () {
-                  $this.text(this.countNum);
-               },
-            }
-         );
-      });
-      a = 1;
-   }
-});
+document.addEventListener('mousemove', parallax)
 
 $('.partners').slick({
 	infinite: true,
