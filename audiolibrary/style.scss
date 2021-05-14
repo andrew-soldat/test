@@ -159,8 +159,6 @@ body {
    }
 }
 .search {
-	width: 100%;
-	max-width: 330px;
 	display: flex;
 	height: 39px;
 
@@ -205,13 +203,17 @@ body {
 
 	&__body {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 		margin: 0 -15px;
+
+		@media (max-width: 1250px) {
+			justify-content: center;
+		}
 	}
 	
 	&__column {
-		max-width: 336px;
+		max-width: 360px;
 		flex: 0 1 25%;
 		padding: 0 15px 30px;
 
