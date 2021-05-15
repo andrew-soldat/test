@@ -132,13 +132,27 @@
    }
 })();
 
-const imgItems = titlesFilter = document.querySelectorAll('.filter__title');
+const titlesFilter = document.querySelectorAll('.filter__title');
 
 titlesFilter.forEach(item => {
 	item.addEventListener('click', function (){
 		item.classList.toggle('active');
 	})
 })
+
+const btnToggleTheme = document.querySelector('.info-video__button'),
+		wrapperPageVideo = document.querySelector('.wrapper-page-video'),
+		img = document.getElementById('img');
+
+btnToggleTheme.addEventListener('click', function (){
+	wrapperPageVideo.classList.toggle('white');
+
+	if (wrapperPageVideo.classList.contains('white')) {
+		img.src = "./image-white.png";
+	} else {
+		img.src = "./image-black.png";
+	}
+});
 
 document.addEventListener('click', function(e){
 	if (!e.target.closest('.filter__section')) {
