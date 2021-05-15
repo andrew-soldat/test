@@ -94,23 +94,6 @@ $('.partners').slick({
 	]
 });
 
-$('.slider-last-new__fullscreen').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	arrows: false,
-	fade: true,
-	asNavFor: '.slider-last-new__nav',
-});
-
-$('.slider-last-new__nav').slick({
-	slidesToShow: 4,
-	slidesToScroll: 1,
-	asNavFor: '.slider-last-new__fullscreen',
-	dots: false,
-	centerMode: true,
-	focusOnSelect: true,
-});
-
 $('.slider-events').slick({
 	arrows: false,
 	dots: true,
