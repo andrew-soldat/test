@@ -15,11 +15,17 @@
 :active {
    outline: none;
 }
-
 body {
 	background-color: #FEFEFE;
 }
-
+input {
+	outline: none;
+}
+input:-webkit-autofill {
+	-webkit-box-shadow: inset 0 0 0 50px #464646 !important;
+	-webkit-text-fill-color: #F2F2F2 !important;
+	color: #F2F2F2 !important;
+}
 .audio {
 
 	&__form {
@@ -370,6 +376,12 @@ body {
 
 	&.white {
 		background-color: #FEFEFE;
+
+		input:-webkit-autofill {
+			-webkit-box-shadow: inset 0 0 0 50px #F2F2F2 !important;
+			-webkit-text-fill-color: #333333 !important;
+			color: #333333 !important;
+	  }
 
 		&:before {
 			background: url('./decor-gray.png') 0 0 no-repeat;
@@ -843,3 +855,5 @@ body {
 .form__line._error > .form__text-error {
 	display: block;
 }
+
+ 
