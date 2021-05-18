@@ -1088,7 +1088,7 @@ h6 {
    &__header {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-end;
+		align-items: flex-start;
 		margin: 0px 0px 30px 0px;
 
 		@media (max-width: 565px) {
@@ -1246,66 +1246,53 @@ h6 {
    }
 }
 .item-news {
-
-	&__label {
-		padding: 5px 30px;
-		font-size: 20px;
-		font-weight: 500;
-		background-color: #93C1F9;
-
-		@media (max-width: 565px) {
-			font-size: 18px;
-			padding: 0px 0px 0px 10px;
-		}
-	}
-
-	&__article {
-		padding: 20px 30px;
-		background-color: #FAFAFA;
-
-		@media (max-width: 565px) {
-			padding: 10px;
-		}
-	}
-
+	
 	&__header {
+		padding: 20px 30px;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
-		margin: 0px 0px 30px 0px;
-
+		background-color: #93C1F9;
+		
 		@media (max-width: 565px) {
 			display: block;
-			margin: 0px 0px 20px 0px;
+			padding: 10px;
 		}
 	}
-
+	
 	&__title {
 		margin: 0px 30px 0px 0px;
 		flex: 1 1 auto;
 		font-size: 24px;
 		font-weight: 600;
-
+		
 		@media (max-width: 565px) {
 			display: block;
 			font-size: 20px;
 			margin: 0px 0px 5px 0px;
 		}
 	}
-
+	
 	&__date {
-		color: #2B8AFF;
+		color: #ffffff;
 		font-size: 18px;
-
+		
 		@media (max-width: 565px) {
 			font-size: 16px;
 		}
 	}
-
+	
 	&__content {
+		padding: 20px 30px;
+		background-color: #FAFAFA;
+		
+		@media (max-width: 565px) {
+			padding: 10px;
+		}
+
 		p {
 			font-size: 18px;
-			margin: 0px 0px 15px 0px;
+			padding: 0px 0px 15px 0px;
 			text-align: justify;
 
 			@media (max-width: 565px) {
@@ -1326,6 +1313,63 @@ h6 {
 			max-width: 100%;
 		}
 	}
+
+	&__back {
+		display: block;
+		padding: 0px 0px 0px 20px;
+		margin: 20px 0px 0px 0px;
+		font-size: 16px;
+		color: #343434;
+		font-weight: 500;
+		transition: all 0.3s ease 0s;
+		position: relative;
+
+      &:before {
+         content: '';
+         width: 9px;
+         height: 9px;
+         border-top: 2px solid #343434;
+         border-left: 2px solid #343434;
+         transform: rotate(-45deg);
+         position: absolute;
+         top: 25%;
+         left: 5px;
+         transition: all 0.3s ease 0s;
+		}
+
+		&:hover {
+         color: #005fd3;
+
+         &:before {
+            border-color: #005fd3;
+            left: 2px;
+         }
+      }
+	}
+}
+.photo-slider {
+	margin: 0 90px 15px;
+
+	@media (max-width: 768px) {
+		margin: 0 0 15px;
+	}
+
+	&__img {
+		margin: 10px 5px 0px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.slick-dots button {
+		background-color: #93c1f9;
+	}
+
+	.slick-active button {
+		background-color: #2B8AFF;
+	}
+
 }
 .documents {
 
@@ -1430,6 +1474,7 @@ h6 {
 
 	&__form {
 		display: flex;
+		align-items: center;
 	}
 
    &__section {
@@ -1446,7 +1491,7 @@ h6 {
    }
 
    &__title {
-      padding: 0px 22px 0px 0px;
+      padding: 7px 22px 7px 0px;
       font-size: 14px;
       cursor: pointer;
       position: relative;
@@ -1459,13 +1504,13 @@ h6 {
          border-right: 2px solid #343434;
          transform: rotate(135deg);
          position: absolute;
-         top: 3px;
+         top: 10px;
          right: 0;
       }
 
       &.active {
          &:before {
-            top: 8px;
+            top: 15px;
             transform: rotate(-45deg);
          }
          & + .filter__body {
@@ -1481,7 +1526,7 @@ h6 {
       background-color: #fff;
       box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.13);
       position: absolute;
-      top: 29px;
+      top: 35px;
       left: -13px;
 		transform: translateY(30px);
 		transition: all 0.3s ease 0s;
@@ -1538,6 +1583,20 @@ h6 {
          transition: all 0.3s ease 0s;
       }
    }
+
+	&__button {
+		background-color: #93c1f9;
+		font-size: 14px;
+      font-weight: 500;
+		color: ##343434;
+		margin: 0px 0px 0px 20px;
+		padding: 7px 10px;
+		transition: all 0.3s ease 0s;
+		
+		&:hover {
+			background-color: #2B8AFF;
+		}
+	}
 }
 .pagging {
    padding: 0px 20px 30px;
@@ -1773,10 +1832,26 @@ a.footer__text:hover {
 	position: relative;
 	z-index: 1;
 	display: flex;
+	flex-direction: column;
 	justify-content:center;
 	align-items: center;
 
 	img {
 		max-width: 100%;
+	}
+
+	&__text {
+		margin: 15px 0px 0px 0px;
+		font-size: 20px;
+	}
+
+	&__back {
+		color: inherit;
+		font-size: 18px;
+		margin: 15px 0px 0px 0px;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }

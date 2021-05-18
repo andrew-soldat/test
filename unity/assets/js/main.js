@@ -21,9 +21,21 @@ document.addEventListener('click', function (e) {
 
 titlesFilter.forEach(item => {
 	item.addEventListener('click', function (){
-		item.classList.toggle('active');
+		if (item.classList.contains("active")) {
+			item.classList.remove('active');
+		} else {
+			addClass(item);
+		}
 	})
 })
+
+function addClass(currentItem) {
+	titlesFilter.forEach((item) => {
+		item.classList.remove('active');
+	})
+	item = currentItem;
+	item.classList.add('active');
+}
 
 document.addEventListener('click', function(e){
 	if (!e.target.closest('.filter__section')) {
@@ -112,6 +124,38 @@ $('.news__slider').slick({
 			settings: {
 				arrows: false,
 				dots: true
+			}
+		},
+	]
+});
+
+$(".photo-slider__main").slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: true,
+	asNavFor: ".photo-slider__nav",
+});
+
+$(".photo-slider__nav").slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	asNavFor: ".photo-slider__main",
+	dots: true,
+	arrows: true,
+	centerMode: true,
+	focusOnSelect: true,
+	responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 3
+			}
+		},
+		{
+			breakpoint: 565,
+			settings: {
+				slidesToShow: 2
 			}
 		},
 	]
