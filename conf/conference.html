@@ -21,38 +21,37 @@
                <nav class="header__nav">
                   <ul class="header__list">
                      <li>
-                        <a href="#number" class="header__link link">В цифрах</a>
+                        <a href="#numbers" class="header__link link anchor">В цифрах</a>
                      </li>
-                     <li><a href="" class="header__link link">Для кого</a></li>
-                     <li><a href="" class="header__link link">Программа</a></li>
+                     <li><a href="#whom" class="header__link link anchor">Для кого</a></li>
+                     <li><a href="#program" class="header__link link anchor">Программа</a></li>
                      <li>
-                        <a href="" class="header__link link">Приобрести курс</a>
-                     </li>
-                  </ul>
-                  <ul class="header__list header__list_phone">
-                     <li>
-                        <a href="tel:80172691938" class="header__link link"
-                           >(017) 2691938</a
-                        >
-                     </li>
-                     <li>
-                        <a href="tel:80172691979" class="header__link link"
-                           >(017) 2691979</a
-                        >
-                     </li>
-                     <li>
-                        <a href="tel:80256914645" class="header__link link"
-                           >(025) 6914645</a
-                        >
+                        <a href="#get-course" class="header__link link anchor">Приобрести курс</a>
                      </li>
                   </ul>
                </nav>
-               <div class="header__overlay"></div>
-               <div class="header__burger">
+					<div class="header__burger">
                   <span></span>
                   <span></span>
                   <span></span>
                </div>
+               <div class="header__phones phones">
+                  <button class="phones__button btn-toggle"></button>
+                  <div class="phones__block hidden-block">
+                     <a href="tel:80172691938" class="phones__link link"
+                        >(017) 2691938</a
+                     >
+
+                     <a href="tel:80172691979" class="phones__link link"
+                        >(017) 2691979</a
+                     >
+
+                     <a href="tel:80256914645" class="phones__link link"
+                        >(025) 6914645</a
+                     >
+                  </div>
+               </div>
+               <div class="header__overlay"></div>
             </div>
          </div>
       </header>
@@ -118,7 +117,7 @@
             </div>
          </div>
       </div>
-      <div class="numbers section">
+      <div id="numbers" class="numbers section">
          <div class="container">
             <div class="numbers__title h3"></div>
             <div class="numbers__body">
@@ -145,35 +144,31 @@
             </div>
          </div>
       </div>
-      <div class="whom section">
+      <div id="whom" class="whom section">
          <div class="container">
             <div class="whom__title h3">Для кого</div>
             <div class="whom__body">
                <div class="whom__item">
-                  <div class="whom__icon">
-                  </div>
+                  <div class="whom__icon"></div>
 
                   <div class="whom__text h4">
                      Производителей молочной продукции
                   </div>
                </div>
                <div class="whom__item">
-                  <div class="whom__icon">
-                  </div>
+                  <div class="whom__icon"></div>
                   <div class="whom__text h4">
                      Импортеров и дистрибьюторов молочной продукции
                   </div>
                </div>
                <div class="whom__item">
-                  <div class="whom__icon">
-                  </div>
+                  <div class="whom__icon"></div>
                   <div class="whom__text h4">
                      Руководителей складов готовой продукции
                   </div>
                </div>
                <div class="whom__item">
-                  <div class="whom__icon">
-                  </div>
+                  <div class="whom__icon"></div>
                   <div class="whom__text h4">
                      Представителей оптовой и розничной торговли
                   </div>
@@ -181,7 +176,7 @@
             </div>
          </div>
       </div>
-      <div class="program section">
+      <div id="program" class="program section">
          <div class="container">
             <div class="program__title h3">Программа:</div>
             <div class="program__body">
@@ -357,12 +352,11 @@
                   <div class="program__description text">
                      Ответы на вопросы участников
                   </div>
-                  <div class="program__speakers text"></div>
                </div>
             </div>
          </div>
       </div>
-      <div class="get-course section">
+      <div id="get-course" class="get-course section">
          <div class="container">
             <div class="get-course__body">
                <div class="get-course__attention">
@@ -378,7 +372,8 @@
                      <div class="get-course__text h3">презентации спикеров</div>
                   </div>
                   <div class="get-course__imge">
-                     <img id="img-get-course"
+                     <img
+                        id="img-get-course"
                         class="get-course__image"
                         src="./images/get-course-bg.png"
                         alt=""
@@ -472,31 +467,39 @@
                      Информационно-издательский центр по налогам и сборам
                   </div>
                </div>
-               <div class="footer__contacts">
+               <div class="footer__contacts footer__contacts_phone">
                   <div class="footer__phone">
-                     <a href="tel:375172691979" class="footer__link link">(017) 269-19-79,</a>
-                     <a href="tel:375172691938" class="footer__link link">269-19-38,</a>
-                     <a href="tel:375172691935" class="footer__link link">269-19-35</a>
+                     <a href="tel:375172691979" class="footer__link link"
+                        >(017) 269-19-79,</a
+                     >
+                     <a href="tel:375172691938" class="footer__link link"
+                        >269-19-38,</a
+                     >
+                     <a href="tel:375172691935" class="footer__link link"
+                        >269-19-35</a
+                     >
                   </div>
                   <div class="footer__fax">
-							<a href="tel:375172691940" class="footer__link link">(017) 269-19-40</a>
-						</div>
-               </div>
-					<div class="footer__contacts">
-               	<div class="footer__mail">
-							<a
-                     href="mailto:seminar@info-center.by"
-                     class="footer__link link"
-                     > seminar@info-center.by</a
-                  >
+                     <a href="tel:375172691940" class="footer__link link"
+                        >(017) 269-19-40</a
+                     >
                   </div>
-               	<div class="footer__mail">
-							<a
-                     href="mailto:seminar@info-center.by"
-                     class="footer__link link"
-                     >seminar-nalogbel@mail.ru.
-							</a
-                  >
+               </div>
+               <div class="footer__contacts">
+                  <div class="footer__mail">
+                     <a
+                        href="mailto:seminar@info-center.by"
+                        class="footer__link link"
+                     >
+                        seminar@info-center.by</a
+                     >
+                  </div>
+                  <div class="footer__mail">
+                     <a
+                        href="mailto:seminar@info-center.by"
+                        class="footer__link link"
+                        >seminar-nalogbel@mail.ru.
+                     </a>
                   </div>
                </div>
             </div>
