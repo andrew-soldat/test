@@ -1,6 +1,79 @@
+const btnShowBlock = document.querySelectorAll('.btn-toggle');
+const closeBlock = document.querySelector('.nav-header__close');
+
+btnShowBlock.forEach(item => {
+	item.addEventListener('click', function (){
+		if (item.classList.contains("show-block")) {
+			item.classList.remove('show-block');
+		} else {
+			addClass(item);
+		}
+	})
+})
+
+function addClass(currentItem) {
+	btnShowBlock.forEach((item) => {
+		item.classList.remove('show-block');
+	})
+	item = currentItem;
+	item.classList.add('show-block');
+}
+
+document.addEventListener('click', function(e){
+	if (!e.target.closest('.hidden-block, .btn-toggle')) {
+		btnShowBlock.forEach(item => {
+			if (item.classList.contains('show-block')) {
+				item.classList.remove('show-block');
+			}
+		})
+	}
+})
+
+// closeBlock.addEventListener('click', function(e){
+	// 	btnShowBlock.forEach((item) => {
+		// 		item.classList.remove('show-block');
+		// 	})
+		// })
+		
+const body = document.querySelector('body'),
+		header = document.querySelector('header'),
+		burgerButton = document.querySelector('.header__burger'),
+		menuNav = document.querySelector('.header__nav'),
+		anchorLinks = document.querySelectorAll('.anchor');
+
+window.addEventListener('scroll', function () {
+	if (window.scrollY > 400) {
+		header.classList.add('scroll');
+	} else {
+		header.classList.remove('scroll');
+	}
+});
+		
+burgerButton.addEventListener('click', function (e) {
+	burgerButton.classList.toggle('active');
+	menuNav.classList.toggle('active');
+	body.classList.toggle('lock');
+});
+
+const closeMenuNav = () => {
+   burgerButton.classList.remove('active');
+   menuNav.classList.remove('active');
+   body.classList.remove('lock');
+};
+
+document.addEventListener('click', function (e) {
+   if (!e.target.closest('.header__nav, .header__burger')) {
+      closeMenuNav();
+   }
+});
+		
+anchorLinks.forEach((link) => {
+   link.addEventListener('click', function (e) {
+      closeMenuNav();
+   });
+});
 
 const btnToggleTheme = document.querySelector('.conference__btn-theme'),
-		body = document.querySelector('body'),
 		imgBg = document.getElementById('img-get-course');
 
 btnToggleTheme.addEventListener('click', function (){
@@ -11,6 +84,17 @@ btnToggleTheme.addEventListener('click', function (){
 	} else {
 		imgBg.src = "./images/get-course-bg.png";
 	}
+});
+
+$(function () {
+   $('a[href^="#"]').click(function (event) {
+      var target = $(this).attr('href');
+      $('html, body').animate({ scrollTop: $(target).offset().top - 20}, 800);
+      return false;
+   });
+
+   $('#phone').mask('+375 (99) 999-99-99');
+   $('#unp').mask('999999999');
 });
 
 $(function () {
