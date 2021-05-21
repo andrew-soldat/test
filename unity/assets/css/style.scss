@@ -95,16 +95,16 @@ h6 {
 .content {
 	position: relative;
 	flex: 1 1 auto;
-	padding: 250px 0px 0px 0px;
+	padding-top: 130px;
 	min-height: 80vh;
 	background: url('../images/main/main.png') center top no-repeat;
 
 	@media (max-width: 991px) {
-		padding: 180px 0px 0px 0px;
+		padding-top: 120px;
 	}
 
 	@media (max-width: 768px) {
-		padding: 80px 0px 0px 0px;
+		padding-top: 80px;
 	}
 
 	&__bg {
@@ -457,6 +457,15 @@ h6 {
    z-index: 10;
 }
 .main {
+	margin: 120px 0px 0px 0px;
+
+	@media (max-width: 991px) {
+		margin: 80px 0px 0px 0px;
+	}
+
+	@media (max-width: 768px) {
+		margin: 0px 0px 0px 0px;
+	}
 
 	&__body {
 		display: flex;
@@ -1390,6 +1399,7 @@ h6 {
 
    &__documents {
       padding: 30px 20px;
+		min-height: 450px;
 
 		@media (max-width: 565px) {
 			padding: 20px 10px;
@@ -1401,7 +1411,7 @@ h6 {
       padding: 0px 0px 0px 17px;
       margin: 0px 0px 20px 0px;
       color: #343434;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
       background: url('../images/document.svg') left top no-repeat;
       transition: all 0.3s ease 0s;
@@ -1583,20 +1593,6 @@ h6 {
          transition: all 0.3s ease 0s;
       }
    }
-
-	&__button {
-		background-color: #93c1f9;
-		font-size: 14px;
-      font-weight: 500;
-		color: ##343434;
-		margin: 0px 0px 0px 20px;
-		padding: 7px 10px;
-		transition: all 0.3s ease 0s;
-		
-		&:hover {
-			background-color: #2B8AFF;
-		}
-	}
 }
 .pagging {
    padding: 0px 20px 30px;
@@ -1752,7 +1748,7 @@ a.contacts__text:hover {
    padding: 55px 0px 40px 0px;
    background-color: #9cc5f8;
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 
 	@media (max-width: 565px) {
 		padding: 30px 0px 30px 0px;
