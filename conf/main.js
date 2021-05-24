@@ -1,15 +1,16 @@
 const btnShowBlock = document.querySelectorAll('.btn-toggle');
-const closeBlock = document.querySelector('.nav-header__close');
 
-btnShowBlock.forEach(item => {
-	item.addEventListener('click', function (){
-		if (item.classList.contains("show-block")) {
-			item.classList.remove('show-block');
-		} else {
-			addClass(item);
-		}
-	})
-})
+if (btnShowBlock.length > 0) {
+	btnShowBlock.forEach(item => {
+		item.addEventListener('click', function (){
+			if (item.classList.contains("show-block")) {
+				item.classList.remove('show-block');
+			} else {
+				addClass(item);
+			}
+		})
+	});
+}
 
 function addClass(currentItem) {
 	btnShowBlock.forEach((item) => {
@@ -17,7 +18,7 @@ function addClass(currentItem) {
 	})
 	item = currentItem;
 	item.classList.add('show-block');
-}
+};
 
 document.addEventListener('click', function(e){
 	if (!e.target.closest('.hidden-block, .btn-toggle')) {
@@ -27,13 +28,7 @@ document.addEventListener('click', function(e){
 			}
 		})
 	}
-})
-
-// closeBlock.addEventListener('click', function(e){
-	// 	btnShowBlock.forEach((item) => {
-		// 		item.classList.remove('show-block');
-		// 	})
-		// })
+});
 		
 const body = document.querySelector('body'),
 		header = document.querySelector('header'),
@@ -89,19 +84,13 @@ btnToggleTheme.addEventListener('click', function (){
 $(function () {
    $('a[href^="#"]').click(function (event) {
       var target = $(this).attr('href');
-      $('html, body').animate({ scrollTop: $(target).offset().top - 20}, 800);
+      $('html, body').animate({ scrollTop: $(target).offset().top - 80}, 800);
       return false;
    });
 
    $('#phone').mask('+375 (99) 999-99-99');
    $('#unp').mask('999999999');
 });
-
-$(function () {
-	$('#phone').mask('+375 (99) 999-99-99');
-	$('#unp').mask('999999999');
-
-})
 
 document.addEventListener('DOMContentLoaded', function () {
    let form = document.getElementById('form');
