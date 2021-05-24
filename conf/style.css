@@ -284,6 +284,12 @@ body.white .form__input {
   color: #333;
   border: 1px solid #333;
 }
+body.white .form__input:focus {
+  border-color: #1fc1be;
+}
+body.white .form__input._error {
+  border-color: #f54444;
+}
 body.white .form__placeholder {
   background-color: #f9f9f9;
 }
@@ -328,6 +334,9 @@ body.white .footer__fax {
 }
 body.white .footer__mail {
   background: url("./images/icon/mail-black.svg") 0 0 no-repeat;
+}
+body.white .footer__logo {
+  color: #333;
 }
 
 .h1 {
@@ -444,7 +453,7 @@ body.white .footer__mail {
   display: flex;
   align-items: center;
 }
-.header__logo {
+.header__logo a {
   position: relative;
   z-index: 3;
 }
@@ -455,6 +464,7 @@ body.white .footer__mail {
 @media (max-width: 900px) {
   .header__logo {
     flex: 1 1 auto;
+    order: 1;
   }
 }
 .header__nav {
@@ -486,7 +496,12 @@ body.white .footer__mail {
   align-items: center;
 }
 .header__list li {
-  margin: 0px 0px 0px 60px;
+  margin: 0px 0px 0px 40px;
+}
+@media (max-width: 1350px) {
+  .header__list li {
+    margin: 0px 0px 0px 30px;
+  }
 }
 @media (max-width: 900px) {
   .header__list {
@@ -501,6 +516,8 @@ body.white .footer__mail {
 }
 @media (max-width: 900px) {
   .header__burger {
+    order: 3;
+    margin: 0px 0px 0px 30px;
     display: block;
     width: 30px;
     height: 18px;
@@ -551,7 +568,7 @@ body.white .footer__mail {
 .phones__block {
   display: flex;
 }
-@media (max-width: 1270px) {
+@media (max-width: 1300px) {
   .phones__block {
     flex-direction: column;
     width: 145px;
@@ -572,12 +589,20 @@ body.white .footer__mail {
 .phones__link:first-child {
   margin: 0px 0px 0px 20px;
 }
-@media (max-width: 1270px) {
+@media (max-width: 1300px) {
   .phones__link {
     margin: 10px 0px 0px 0px;
   }
   .phones__link:first-child {
     margin: 0px 0px 0px 0px;
+  }
+}
+@media (max-width: 900px) {
+  .phones {
+    order: 2;
+  }
+  .phones__button {
+    margin: 0px;
   }
 }
 
@@ -692,6 +717,31 @@ body.white .footer__mail {
   max-width: 100%;
 }
 
+.promo__title {
+  margin: 0px 0px 20px 0px;
+}
+.promo__body {
+  width: 100%;
+  max-width: 990px;
+  padding: 0px 0px 39.75% 0px;
+  margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 1030px) {
+  .promo__body {
+    padding: 0px 0px 56.25% 0px;
+  }
+}
+.promo__body iframe {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .course {
   display: flex;
   align-items: center;
@@ -743,6 +793,7 @@ body.white .footer__mail {
 .course__title {
   margin: 0px 0px 10px 0px;
 }
+
 .numbers__title {
   margin: 0px 0px 20px 0px;
 }
@@ -788,6 +839,7 @@ body.white .footer__mail {
   justify-content: center;
   align-items: center;
 }
+
 .whom {
   padding: 40px 0 10px;
   background-color: #1e1e1e;
@@ -797,7 +849,7 @@ body.white .footer__mail {
 }
 .whom__body {
   display: flex;
-  margin: 0 -15px;
+  margin: 0 -15px 10px;
   flex-wrap: wrap;
 }
 .whom__item {
@@ -976,6 +1028,7 @@ body.white .footer__mail {
     margin: 20px 0px 20px 0px;
   }
 }
+
 .form {
   width: 100%;
   max-width: 395px;
@@ -1072,7 +1125,7 @@ body.white .footer__mail {
   display: none;
 }
 .checkbox__input:checked + .checkbox__label:after {
-  transform: rotate(-50deg) scale(1);
+  transform: rotate(-58deg) scale(1) skew(-20deg);
 }
 .checkbox__input._error + .checkbox__label:before {
   border-color: #f54444;
@@ -1099,14 +1152,14 @@ body.white .footer__mail {
 .checkbox__label:after {
   content: "";
   position: absolute;
-  left: 2px;
-  top: -2px;
-  width: 15px;
+  left: 0px;
+  top: -3px;
+  width: 18px;
   height: 8px;
   border-left: 2px solid #f2f2f2;
   border-bottom: 2px solid #f2f2f2;
   border-radius: 2px;
-  transform: rotate(-50deg) scale(0);
+  transform: rotate(-58deg) scale(0) skew(-20deg);
   transition: all 0.3s ease 0s;
 }
 .checkbox__label a {
@@ -1154,12 +1207,13 @@ body.white .footer__mail {
   display: flex;
   align-items: center;
   margin: 0px 20px 0px 0px;
+  color: #f2f2f2;
 }
 .footer__logo img {
   width: 56px;
   height: 56px;
 }
-@media (max-width: 1119px) {
+@media (max-width: 1080px) {
   .footer__logo {
     order: 1;
     margin: 30px 0px 0px 0px;
@@ -1173,10 +1227,16 @@ body.white .footer__mail {
 .footer__name {
   margin: 0px 0px 0px 25px;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
+  font-size: 14px;
 }
 .footer__contacts_phone {
   margin: 0px 20px 0px 0px;
+}
+@media (max-width: 1080px) {
+  .footer__contacts_phone {
+    margin: 0px 60px 0px 0px;
+  }
 }
 @media (max-width: 730px) {
   .footer__contacts {
