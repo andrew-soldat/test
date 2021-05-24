@@ -1,4 +1,4 @@
-const imgItems = document.querySelectorAll('.main__bg'),
+const imgItems = document.querySelectorAll('.content__bg'),
    titlesFilter = document.querySelectorAll('.filter__title'),
    body = document.querySelector('body'),
    header = document.querySelector('header'),
@@ -21,9 +21,21 @@ document.addEventListener('click', function (e) {
 
 titlesFilter.forEach(item => {
 	item.addEventListener('click', function (){
-		item.classList.toggle('active');
+		if (item.classList.contains("active")) {
+			item.classList.remove('active');
+		} else {
+			addClass(item);
+		}
 	})
 })
+
+function addClass(currentItem) {
+	titlesFilter.forEach((item) => {
+		item.classList.remove('active');
+	})
+	item = currentItem;
+	item.classList.add('active');
+}
 
 document.addEventListener('click', function(e){
 	if (!e.target.closest('.filter__section')) {
@@ -35,8 +47,6 @@ document.addEventListener('click', function(e){
 	}
 })
 
-
-
 function parallax(e) {
    imgItems.forEach((item) => {
       let speed = item.getAttribute('data-speed');
@@ -46,36 +56,7 @@ function parallax(e) {
    });
 }
 
-document.addEventListener('mousemove', parallax);
-
-var a = 0;
-$(window).scroll(function () {
-   var oTop = $('.number__item').offset().top - window.innerHeight;
-   if (a == 0 && $(window).scrollTop() > oTop) {
-      $('.number__count').each(function () {
-         var $this = $(this),
-            countTo = $this.attr('data-count');
-         $({
-            countNum: $this.text(),
-         }).animate(
-            {
-               countNum: countTo,
-            },
-            {
-               duration: 1500,
-               easing: 'swing',
-               step: function () {
-                  $this.text(Math.floor(this.countNum));
-               },
-               complete: function () {
-                  $this.text(this.countNum);
-               },
-            }
-         );
-      });
-      a = 1;
-   }
-});
+document.addEventListener('mousemove', parallax)
 
 $('.partners').slick({
 	infinite: true,
@@ -125,23 +106,6 @@ $('.partners').slick({
 	]
 });
 
-$('.slider-last-new__fullscreen').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	arrows: false,
-	fade: true,
-	asNavFor: '.slider-last-new__nav',
-});
-
-$('.slider-last-new__nav').slick({
-	slidesToShow: 4,
-	slidesToScroll: 1,
-	asNavFor: '.slider-last-new__fullscreen',
-	dots: false,
-	centerMode: true,
-	focusOnSelect: true,
-});
-
 $('.slider-events').slick({
 	arrows: false,
 	dots: true,
@@ -160,6 +124,38 @@ $('.news__slider').slick({
 			settings: {
 				arrows: false,
 				dots: true
+			}
+		},
+	]
+});
+
+$(".photo-slider__main").slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: true,
+	asNavFor: ".photo-slider__nav",
+});
+
+$(".photo-slider__nav").slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	asNavFor: ".photo-slider__main",
+	dots: true,
+	arrows: true,
+	centerMode: true,
+	focusOnSelect: true,
+	responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 3
+			}
+		},
+		{
+			breakpoint: 565,
+			settings: {
+				slidesToShow: 2
 			}
 		},
 	]
