@@ -92,6 +92,8 @@ $(function () {
    $('#unp').mask('999999999');
 });
 
+const blockThanks = document.querySelector('.form__thanks');
+
 document.addEventListener('DOMContentLoaded', function () {
    let form = document.getElementById('form');
 
@@ -115,6 +117,10 @@ document.addEventListener('DOMContentLoaded', function () {
             formData.reset();
          } else {
             form.reset();
+				blockThanks.classList.add('show');
+				setTimeout(function(){
+					blockThanks.classList.remove('show');
+				},5000)
             alert('Ошибка');
          }
       }
