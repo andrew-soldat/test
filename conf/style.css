@@ -294,6 +294,7 @@ body.white .form__placeholder {
   background-color: #f9f9f9;
 }
 body.white .form__thanks {
+  color: #f2f2f2;
   background-color: #1fc1be;
   border-left: 3px solid #1fc1be;
 }
@@ -1011,6 +1012,11 @@ body.white .footer__logo {
   font-size: 100px;
   font-weight: 700;
 }
+@media (max-width: 991px) {
+  .get-course__discount {
+    font-size: 70px;
+  }
+}
 .get-course__bonus {
   margin: 0px 0px 10px 0px;
   padding: 0px 0px 0px 62px;
@@ -1091,6 +1097,7 @@ body.white .footer__logo {
   background-color: #fce45c;
   border-left: 3px solid #ffd900;
   font-size: 16px;
+  color: #4f4f4f;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease 0s;
@@ -1152,8 +1159,8 @@ body.white .footer__logo {
 .checkbox__label:after {
   content: "";
   position: absolute;
-  left: 0px;
-  top: -3px;
+  left: 1px;
+  top: -4px;
   width: 18px;
   height: 8px;
   border-left: 2px solid #f2f2f2;
