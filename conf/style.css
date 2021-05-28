@@ -1012,6 +1012,11 @@ body.white .footer__logo {
   font-size: 100px;
   font-weight: 700;
 }
+@media (max-width: 991px) {
+  .get-course__discount {
+    font-size: 70px;
+  }
+}
 .get-course__bonus {
   margin: 0px 0px 10px 0px;
   padding: 0px 0px 0px 62px;
