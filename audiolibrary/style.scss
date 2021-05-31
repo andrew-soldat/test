@@ -78,7 +78,7 @@ input:-webkit-autofill {
          right: 0;
       }
 
-      &.active {
+      &._show-block {
          &:before {
             top: 10px;
             transform: rotate(-45deg);

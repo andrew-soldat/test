@@ -76,11 +76,11 @@ input:-webkit-autofill {
   top: 5px;
   right: 0;
 }
-.filter__title.active:before {
+.filter__title._show-block:before {
   top: 10px;
   transform: rotate(-45deg);
 }
-.filter__title.active + .filter__body {
+.filter__title._show-block + .filter__body {
   transform: translateY(0px);
   opacity: 1;
   visibility: visible;
