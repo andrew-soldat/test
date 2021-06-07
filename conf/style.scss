@@ -1141,11 +1141,11 @@ body.white {
 
    &__discount {
       color: #fce45c;
-      font-size: 100px;
+      font-size: 60px;
       font-weight: 700;
 
-		@media (max-width: 991px) {
-			font-size: 70px;
+		@media (max-width: 768px) {
+			font-size: 50px;
 		}
    }
 
