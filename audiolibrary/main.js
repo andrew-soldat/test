@@ -166,15 +166,15 @@ const btnToggleTheme = document.querySelector('.info-video__button'),
 		wrapperPageVideo = document.querySelector('.wrapper-page-video'),
 		img = document.getElementById('img');
 
-btnToggleTheme.addEventListener('click', function (){
-	wrapperPageVideo.classList.toggle('white');
+// btnToggleTheme.addEventListener('click', function (){
+// 	wrapperPageVideo.classList.toggle('white');
 
-	if (wrapperPageVideo.classList.contains('white')) {
-		img.src = "./image-white.png";
-	} else {
-		img.src = "./image-black.png";
-	}
-});
+// 	if (wrapperPageVideo.classList.contains('white')) {
+// 		img.src = "./image-white.png";
+// 	} else {
+// 		img.src = "./image-black.png";
+// 	}
+// });
 
 document.addEventListener('click', function(e){
 	if (!e.target.closest('.filter__section')) {
@@ -185,10 +185,40 @@ document.addEventListener('click', function(e){
 		})
 	}
 })
+
+const btnOpenPopup = document.querySelectorAll('.audio__buy');
+const popupBuyVideo = document.querySelector('.popup-buy-video');
+const btnClosePopup = document.querySelector('.popup-buy-video__close');
+const body = document.querySelector('body');
+
+const closePopup = () => {
+   body.classList.remove('lock');
+   popupBuyVideo.classList.remove('open');
+};
+
+btnOpenPopup.forEach(btn => {
+	btn.addEventListener('click', function (e) {
+		e.preventDefault();
+		console.log('ffffffffff');
+		body.classList.add('lock');
+		popupBuyVideo.classList.add('open');
+	});
+});
+
+btnClosePopup.addEventListener('click', function (e) {
+   e.preventDefault();
+   closePopup();
+});
+
+popupBuyVideo.addEventListener('click', function (e) {
+   if (!e.target.closest('.popup-buy-video__content')) {
+      closePopup();
+   }
+});
+
 $(function () {
 	$('#phone').mask('+375 (99) 999-99-99');
 	$('#unp').mask('999999999');
-
 })
 
 document.addEventListener('DOMContentLoaded', function () {
