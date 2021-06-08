@@ -68,17 +68,49 @@ anchorLinks.forEach((link) => {
    });
 });
 
-const btnToggleTheme = document.querySelector('.conference__btn-theme'),
-		imgBg = document.getElementById('img-get-course');
+const btnToggleTheme = document.querySelector('.info-video__btn-theme'),
+		wrapperPage = document.querySelector('.wrapper-page-video'),
+		imgMainBlack = document.getElementById('img-main-black'),
+		imgMainWhite = document.getElementById('img-main-white'),
+		imgGetCourse = document.getElementById('img-get-course');
+
 
 btnToggleTheme.addEventListener('click', function (){
-	body.classList.toggle('white');
+	wrapperPage.classList.toggle('white');
 
-	if (body.classList.contains('white')) {
-		imgBg.src = "./images/get-course-bg-green.png";
+	if (wrapperPage.classList.contains('white')) {
+		imgMainBlack.style.display = "none";
+		imgMainWhite.style.display = "block";
 	} else {
-		imgBg.src = "./images/get-course-bg.png";
+		imgMainBlack.style.display = "block";
+		imgMainWhite.style.display = "none";
 	}
+});
+
+const btnOpenPopup = document.querySelector('.button');
+const popupOrder = document.querySelector('.popup-order');
+const btnClosePopup = document.querySelector('.popup-order__close');
+
+const closePopup = () => {
+   body.classList.remove('lock');
+   popupOrder.classList.remove('open');
+};
+
+btnOpenPopup.addEventListener('click', function (e) {
+	e.preventDefault();
+	body.classList.add('lock');
+	popupOrder.classList.add('open');
+});
+
+btnClosePopup.addEventListener('click', function (e) {
+   e.preventDefault();
+   closePopup();
+});
+
+popupOrder.addEventListener('click', function (e) {
+   if (!e.target.closest('.popup-order__content')) {
+      closePopup();
+   }
 });
 
 $(function () {
