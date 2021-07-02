@@ -143,6 +143,22 @@ btnShowBlock.forEach(item => {
 		}
 	})
 })
+function addClass(currentItem) {
+	btnShowBlock.forEach((item) => {
+		item.classList.remove('_show-block');
+	})
+	item = currentItem;
+	item.classList.add('_show-block');
+}
+document.addEventListener('click', function(e){
+	if (!e.target.closest('.filter__section')) {
+		btnShowBlock.forEach(item => {
+			if (item.classList.contains('_show-block')) {
+				item.classList.remove('_show-block');
+			}
+		})
+	}
+})
 
 // $('.filter__input').on('change', function () {
 // 	const arrayChecked = [];
@@ -154,13 +170,6 @@ btnShowBlock.forEach(item => {
 // 	console.log(arrayChecked);
 // });
 
-function addClass(currentItem) {
-	btnShowBlock.forEach((item) => {
-		item.classList.remove('_show-block');
-	})
-	item = currentItem;
-	item.classList.add('_show-block');
-}
 
 const btnToggleTheme = document.querySelector('.info-video__button'),
 		wrapperPageVideo = document.querySelector('.wrapper-page-video'),
@@ -176,15 +185,6 @@ const btnToggleTheme = document.querySelector('.info-video__button'),
 // 	}
 // });
 
-document.addEventListener('click', function(e){
-	if (!e.target.closest('.filter__section')) {
-		btnShowBlock.forEach(item => {
-			if (item.classList.contains('active')) {
-				item.classList.remove('active');
-			}
-		})
-	}
-})
 
 const btnOpenPopup = document.querySelectorAll('.audio__buy');
 const popupBuyVideo = document.querySelector('.popup-buy-video');
