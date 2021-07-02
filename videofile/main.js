@@ -72,7 +72,8 @@ const btnToggleTheme = document.querySelector('.info-video__btn-theme'),
 		wrapperPage = document.querySelector('.wrapper-page-video'),
 		imgMainBlack = document.getElementById('img-main-black'),
 		imgMainWhite = document.getElementById('img-main-white'),
-		imgGetCourse = document.getElementById('img-get-course');
+		imgGetCourseBlack = document.getElementById('img-get-course-black');
+		imgGetCourseWhite = document.getElementById('img-get-course-white');
 
 
 btnToggleTheme.addEventListener('click', function (){
@@ -81,9 +82,13 @@ btnToggleTheme.addEventListener('click', function (){
 	if (wrapperPage.classList.contains('white')) {
 		imgMainBlack.style.display = "none";
 		imgMainWhite.style.display = "block";
+		imgGetCourseBlack.style.display = "none";
+		imgGetCourseWhite.style.display = "block";
 	} else {
 		imgMainBlack.style.display = "block";
 		imgMainWhite.style.display = "none";
+		imgGetCourseBlack.style.display = "block";
+		imgGetCourseWhite.style.display = "none";
 	}
 });
 

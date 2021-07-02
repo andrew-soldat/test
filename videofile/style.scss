@@ -206,6 +206,21 @@ h6 {
 			background-color: rgba(235, 235, 235, 0.4);
 		}
 
+		.btn-back {
+
+			&:before {
+				border-color: #333333;
+			}
+
+			&:hover {
+				color: #1fc1be;
+		
+				&.btn-back:before {
+					border-color: #1fc1be;
+				}
+			}
+		}
+
 		.info-video {
 			&__label {
 				color: #f2f2f2;
@@ -418,6 +433,10 @@ h6 {
 			&__logo {
 				color: #333;
 			}
+		}
+
+		.popup-order__content {
+			background-color: #1fc1be;
 		}
 	}
 }
@@ -713,10 +732,45 @@ h6 {
    backdrop-filter: blur(8px);
    z-index: 1;
 }
+.btn-back {
+	padding: 0px 0px 0px 15px;
+	margin: 0px 0px 20px 0px;
+	position: relative;
+	display: inline-block;
+
+	&:before {
+		content:'';
+		content: "";
+		width: 10px;
+		height: 10px;
+		border-top: 3px solid #ffffff;
+		border-left: 3px solid #ffffff;
+		transform: rotate(-45deg);
+		position: absolute;
+		top: 5px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+
+	&:hover {
+		color: #fce45c;
+
+		&.btn-back:before {
+			left: -3px;
+			border-color: #fce45c;
+		}
+	}
+}
 #img-main-black {
 	display: block;
 }
 #img-main-white {
+	display: none;
+}
+#img-get-course-black {
+	display: block;
+}
+#img-get-course-white {
 	display: none;
 }
 .info-video {
@@ -1500,7 +1554,6 @@ h6 {
 		font-size: 16px;
 		color: #4f4f4f;
       background-color: #fce45c;
-      border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 6px;
       transition: all 0.8s ease 0s;
       opacity: 0;

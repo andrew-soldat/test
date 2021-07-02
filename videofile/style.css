@@ -196,6 +196,15 @@ h6 {
   transition: all 0.3s ease 0s;
   background-color: rgba(235, 235, 235, 0.4);
 }
+.wrapper-page-video.white .btn-back:before {
+  border-color: #333333;
+}
+.wrapper-page-video.white .btn-back:hover {
+  color: #1fc1be;
+}
+.wrapper-page-video.white .btn-back:hover.btn-back:before {
+  border-color: #1fc1be;
+}
 .wrapper-page-video.white .info-video__label {
   color: #f2f2f2;
   background-color: #1fc1be;
@@ -346,6 +355,9 @@ h6 {
 }
 .wrapper-page-video.white .footer__logo {
   color: #333;
+}
+.wrapper-page-video.white .popup-order__content {
+  background-color: #1fc1be;
 }
 
 .h1 {
@@ -635,11 +647,46 @@ h6 {
   z-index: 1;
 }
 
+.btn-back {
+  padding: 0px 0px 0px 15px;
+  margin: 0px 0px 20px 0px;
+  position: relative;
+  display: inline-block;
+}
+.btn-back:before {
+  content: "";
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transition: all 0.3s ease 0s;
+}
+.btn-back:hover {
+  color: #fce45c;
+}
+.btn-back:hover.btn-back:before {
+  left: -3px;
+  border-color: #fce45c;
+}
+
 #img-main-black {
   display: block;
 }
 
 #img-main-white {
+  display: none;
+}
+
+#img-get-course-black {
+  display: block;
+}
+
+#img-get-course-white {
   display: none;
 }
 
@@ -1337,7 +1384,6 @@ h6 {
   font-size: 16px;
   color: #4f4f4f;
   background-color: #fce45c;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   transition: all 0.8s ease 0s;
   opacity: 0;
