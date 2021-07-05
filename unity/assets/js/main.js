@@ -58,7 +58,7 @@ function parallax(e) {
 
 document.addEventListener('mousemove', parallax)
 
-$('.partners').slick({
+$('.partners__body').slick({
 	infinite: true,
 	slidesToShow: 5,
 	slidesToScroll: 1,
