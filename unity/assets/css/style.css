@@ -817,9 +817,6 @@ h6 {
   margin: 0;
 }
 
-.our-history {
-  background-color: #ebf4ff;
-}
 .our-history__body {
   display: flex;
   flex-wrap: wrap;
@@ -874,7 +871,7 @@ h6 {
 }
 .our-history__date {
   margin: 0 auto;
-  background-color: #ebf4ff;
+  background-color: #ffffff;
   position: relative;
   z-index: 2;
 }
