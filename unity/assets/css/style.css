@@ -656,7 +656,7 @@ h6 {
   background: linear-gradient(0deg, #b7d7ff 0%, rgba(181, 214, 255, 0.489583) 51.04%, rgba(255, 255, 255, 0) 100%);
 }
 .map__body {
-  margin: 0px 0px 95px 0px;
+  margin: 0px 0px 80px 0px;
   position: relative;
 }
 .map__body img {
@@ -729,13 +729,20 @@ h6 {
   }
 }
 
+.partners {
+  background-color: #b7d7ff;
+  padding: 0px 0px 30px 0px;
+}
 .partners .slick-track {
   display: flex;
   align-items: center;
 }
+.partners .slick-arrow {
+  top: 35%;
+}
 .partners__item {
   margin: 0 10px;
-  display: block;
+  display: inline-block;
   position: relative;
   z-index: 2;
 }
@@ -755,7 +762,9 @@ h6 {
   opacity: 0;
 }
 .partners__item img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 50px;
+  margin: 0 auto;
 }
 
 .we-now__body {
