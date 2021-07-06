@@ -576,6 +576,11 @@ h6 {
 .directions__icon img {
   max-width: 100%;
 }
+@media (max-width: 565px) {
+  .directions__icon {
+    background-color: transparent;
+  }
+}
 .directions__text {
   text-align: center;
   font-size: 16px;
@@ -841,7 +846,7 @@ h6 {
     display: none;
   }
 }
-@media (max-width: 565px) {
+@media (max-width: 650px) {
   .our-history__column {
     flex: 1 1 100%;
   }
@@ -869,6 +874,11 @@ h6 {
   right: 100%;
   z-index: 1;
 }
+@media (max-width: 650px) {
+  .our-history__info {
+    background-color: transparent;
+  }
+}
 .our-history__date {
   margin: 0 auto;
   background-color: #ffffff;
@@ -887,6 +897,11 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 650px) {
+  .our-history__date {
+    background-color: transparent;
+  }
 }
 .our-history__text {
   font-size: 16px;

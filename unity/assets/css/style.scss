@@ -606,6 +606,10 @@ h6 {
       img {
          max-width: 100%;
       }
+
+		@media (max-width: 565px) {
+			background-color: transparent;
+		}
    }
 
    &__text {
@@ -931,7 +935,7 @@ h6 {
 			}
 		}
 
-		@media (max-width: 565px) {
+		@media (max-width: 650px) {
 			flex: 1 1 100%;
 
 			.our-history__info:before {
@@ -964,6 +968,10 @@ h6 {
 			right: 100%;
 			z-index: 1;
 		}
+
+		@media (max-width: 650px) {
+			background-color: transparent;
+		}
    }
 	
    &__date {
@@ -984,6 +992,10 @@ h6 {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+		}
+
+		@media (max-width: 650px) {
+			background-color: transparent;
 		}
    }
 
