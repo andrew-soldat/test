@@ -135,23 +135,23 @@ h6 {
    font-weight: 500;
    position: relative;
    z-index: 12;
-	
+
    img {
 		margin: 0px 30px 0px 0px;
       max-width: 100%;
    }
-	
+
    span {
 		text-align: center;
    }
    @media (max-width: 768px) {
 		margin: 0;
-		
+
       span {
 			display: none;
       }
    }
-	
+
 		&_footer {
 			@media (max-width: 768px) {
 				margin: 0px 0px 35px 0px;
@@ -606,6 +606,10 @@ h6 {
       img {
          max-width: 100%;
       }
+
+		@media (max-width: 565px) {
+			background-color: transparent;
+		}
    }
 
    &__text {
@@ -704,91 +708,78 @@ h6 {
    );
 
    &__body {
-      margin: 0px 0px 80px 0px;
-      position: relative;
+     display: flex;
+	  align-items: center;
+	  justify-content: space-around;
 
-      img {
-         max-width: 100%;
-      }
+	  @media (max-width: 768px) {
+		  flex-direction: column;
+	  }
+   }
 
-		@media (max-width: 565px) {
-			margin: 0px 0px 40px 0px;
+   &__img {
+		width: 100%;
+		max-width: 370px;
+
+		@media (min-width: 768px) {
+			order: 2;
+		}
+		svg a._active > path {
+			fill: #4095FF;
+		}
+
+		path {
+			fill: #FAFAFA;
+			stroke: #93C1F9;
+			stroke-width: 5px;
+			stroke-linejoin: round;
+			-webkit-transform: matrix(.5099,0,0,.5099,0,0);
+			-ms-transform: matrix(.5099,0,0,.5099,0,0);
+			transform: matrix(.5099,0,0,.5099,0,0);
+			-webkit-transition: all .3s ease 0s;
+			-o-transition: all .3s ease 0s;
+			transition: all .3s ease 0s;
+			cursor: pointer;
+
+			&:hover {
+				fill: #4095FF;
+			}
+		}
+	}
+
+   &__content {
+		padding: 30px 0px 0px 20px;
+
+		li {
+			list-style-type: disc;
+
+			&:not(:last-child) {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+
+		@media (min-width: 768px) {
+			padding: 0px 0px 0px 20px;
+			order: 1;
 		}
    }
 
-   &__mark {
-      padding: 0px 0px 0px 30px;
-      background: url('../images/mark-map.svg') left top no-repeat;
-      font-size: 24px;
-      color: #2c8aff;
-      font-weight: 500;
-      position: absolute;
-      z-index: 2;
-      transition: all 0.3s ease 0s;
+	&__link {
+		font-size: 16px;
+		color: #343434;
+		font-weight: 500;
+		transition: all 0.3s ease 0s;
 
-      &:hover {
-         color: #005fd3;
-      }
-
-      &_minsk {
-         top: 50%;
-         left: 46%;
-      }
-
-      &_mogilev {
-         top: 48%;
-      	left: 75%;
+		&:hover {
+			color: #2A8AFF;
+			text-decoration: underline;
 		}
-      &_gomel {
-			top: 78%;
-			left: 75%;
-      }
 
-      &_hrodno {
-         top: 54%;
-         left: 7%;
-      }
-
-      &_brest {
-			top: 85%;
-         left: 7%;
-      }
-
-      &_vitebsk {
-         top: 21%;
-         right: 18%;
-         left: 69%;
-      }
-
-		
-		@media (max-width: 565px) {
-			left: 20%;
-
-			&_minsk {
-				top: 5%;
-			}
-	
-			&_mogilev {
-				top: 20%;
-			}
-	
-			&_gomel {
-				top: 35%;
-			}
-	
-			&_hrodno {
-				top: 50%;
-			}
-	
-			&_brest {
-				top: 65%;
-			}
-	
-			&_vitebsk {
-				top: 80%;
-			}
+		&._active {
+			color: #2A8AFF;
+			text-decoration: underline;
 		}
-   }
+	}
 }
 .partners {
 	background-color: #b7d7ff;
@@ -833,7 +824,7 @@ h6 {
 			max-width: 100%;
 			max-height: 50px;
 			margin: 0 auto;
-			
+
 		}
    }
 }
@@ -899,7 +890,7 @@ h6 {
       flex-wrap: wrap;
       margin: 0 -20px;
    }
-	
+
    &__column {
 		flex: 0 1 33.3333%;
       padding: 0 20px 60px;
@@ -931,7 +922,7 @@ h6 {
 			}
 		}
 
-		@media (max-width: 565px) {
+		@media (max-width: 650px) {
 			flex: 1 1 100%;
 
 			.our-history__info:before {
@@ -953,7 +944,7 @@ h6 {
       background-color: #ebf4ff;
       text-align: center;
       position: relative;
-		
+
 		&:before {
 			content: '';
 			width: 319px;
@@ -964,26 +955,34 @@ h6 {
 			right: 100%;
 			z-index: 1;
 		}
+
+		@media (max-width: 650px) {
+			background-color: transparent;
+		}
    }
-	
+
    &__date {
 		margin: 0 auto;
       background-color: #ffffff;
 		position: relative;
 		z-index: 2;
-		
+
 		span {
 			margin: 0 auto;
 			width: 100px;
 			height: 100px;
 			color: #fff;
 			font-size: 14px;
-			font-weight: 700;      
+			font-weight: 700;
 			background-color: #93c1f9;
 			border-radius: 50px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+		}
+
+		@media (max-width: 650px) {
+			background-color: transparent;
 		}
    }
 
@@ -991,24 +990,6 @@ h6 {
       font-size: 16px;
       font-weight: 500;
    }
-}
-.slider-events {
-   margin: 0px 0px 60px 0px;
-
-   &__item {
-
-      img {
-         width: 100%;
-      }
-   }
-
-	.slick-dots {
-		margin: -45px 0px 0px 0px;
-
-		@media (max-width: 565px) {
-			margin: -30px 0px 0px 0px;
-		}
-	}
 }
 .cities {
    display: flex;
@@ -1020,12 +1001,22 @@ h6 {
       flex: 0 1 50%;
       padding: 0 15px 30px;
 
+		@media (min-width: 768px) {
+			&_big {
+				flex: 0 1 100%;
+			}
+		}
+
+
 		@media (max-width: 768px) {
 			flex: 0 1 510px;
 		}
    }
 
    &__items {
+		display: block;
+		width: 100%;
+		height: 100%;
       position: relative;
       z-index: 2;
 
@@ -1049,8 +1040,7 @@ h6 {
    }
 
    &__city {
-      margin: -76px 0px 0px 0px;
-      padding: 0px 0px 0px 30px;
+      padding: 10px 0px 10px 20px;
       background: linear-gradient(
          90.03deg,
          #7fabdf 7.76%,
@@ -1058,14 +1048,19 @@ h6 {
       );
       font-size: 32px;
       color: #fff;
-      line-height: 76px;
-      position: relative;
-      z-index: 1;
+		width: 100%;
+      position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 2;
+
+		@media (max-width: 992px) {
+			font-size: 26px;
+		}
 
 		@media (max-width: 565px) {
-			margin: -50px 0px 0px 0px;
 			font-size: 22px;
-			line-height: 50px;
 		}
    }
 }
@@ -1143,7 +1138,7 @@ h6 {
 	}
 
    &__text {
-		
+
 		p {
 			font-size: 18px;
          margin: 0px 0px 15px 0px;
@@ -1179,12 +1174,12 @@ h6 {
 			left: 0;
       }
    }
-	
+
 	@media (max-width: 991px) {
 		&__body {
 			display: block;
 		}
-		
+
 		&__content {
 			margin: 0px 0px 30px 0px;
 		}
@@ -1214,7 +1209,7 @@ h6 {
       flex: 0 1 25%;
       padding: 0px 15px 0px;
       margin: 0px 0px 30px 0px;
-      display: flex;
+      display: flex !important;
       flex-direction: column;
 
 		@media (max-width: 768px) {
@@ -1227,12 +1222,19 @@ h6 {
    }
 
    &__image {
-      display: inline-block;
+      display: block;
       margin: 0px 0px 20px 0px;
       overflow: hidden;
+		position: relative;
+		padding: 97% 0px 0px 0px;
 
       img {
-         max-width: 100%;
+         width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
          transition: all 0.5s ease 0s;
       }
 
@@ -1245,7 +1247,6 @@ h6 {
 
    &__title {
       flex: 1 1 auto;
-      display: inline-block;
       color: #343434;
       font-size: 18px;
       margin: 0px 0px 20px 0px;
@@ -1263,46 +1264,46 @@ h6 {
    }
 }
 .item-news {
-	
+
 	&__header {
 		padding: 20px 30px;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
 		background-color: #93C1F9;
-		
+
 		@media (max-width: 565px) {
 			display: block;
 			padding: 10px;
 		}
 	}
-	
+
 	&__title {
 		margin: 0px 30px 0px 0px;
 		flex: 1 1 auto;
 		font-size: 24px;
 		font-weight: 600;
-		
+
 		@media (max-width: 565px) {
 			display: block;
 			font-size: 20px;
 			margin: 0px 0px 5px 0px;
 		}
 	}
-	
+
 	&__date {
 		color: #ffffff;
 		font-size: 18px;
-		
+
 		@media (max-width: 565px) {
 			font-size: 16px;
 		}
 	}
-	
+
 	&__content {
 		padding: 20px 30px;
 		background-color: #FAFAFA;
-		
+
 		@media (max-width: 565px) {
 			padding: 10px;
 		}
@@ -1362,6 +1363,25 @@ h6 {
             left: 2px;
          }
       }
+	}
+}
+.main-slider-news {
+	&__wrapper {
+      margin: 0 -15px;
+
+		.news__item {
+			margin: 0;
+		}
+
+		.slick-list,
+		.slick-track {
+			display: flex;
+		}
+
+		.slick-dots button {
+			border: 1px solid #2b8aff;
+		}
+
 	}
 }
 .photo-slider {
@@ -1480,7 +1500,7 @@ h6 {
    align-items: center;
 
 	@media (max-width: 565px) {
-		display: block;	
+		display: block;
 	}
 
    &__heading {
@@ -1731,7 +1751,7 @@ h6 {
 		&__title {
 			padding: 0px 0px 10px 30px;
 		}
-	
+
 		&__info {
 			order: -1;
 			margin: 0px 0px 20px 0px;
