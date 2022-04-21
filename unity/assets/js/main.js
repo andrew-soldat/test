@@ -108,8 +108,10 @@ $('.partners__body').slick({
 $('.main-slider-news__wrapper').slick({
 	infinite: true,
 	dots: false,
-  	slidesToShow: 4,
-  	slidesToScroll: 1,
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	autoplay: true,
+	autoplaySpeed: 5000,
 	responsive: [
 		{
 			breakpoint: 1250,
@@ -187,11 +189,8 @@ $(".photo-slider__nav").slick({
 		},
 	]
 });
-
 $(function () {
 	$(".map__link").hover(function(e) {
-		console.log('fffff');
-		
 		$($(this).attr('data-class')).toggleClass('_active');
 	})
 });

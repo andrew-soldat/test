@@ -1429,7 +1429,7 @@ h6 {
 
 .news__image {
   display: block;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
   overflow: hidden;
   position: relative;
   padding: 97% 0px 0px 0px;
@@ -1453,12 +1453,8 @@ h6 {
 }
 
 .news__title {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
   color: #343434;
   font-size: 18px;
-  margin: 0px 0px 20px 0px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -1468,9 +1464,9 @@ h6 {
 }
 
 .news__date {
-  font-size: 18px;
+  margin: 0px 0px 5px 0px;
+  font-size: 14px;
   color: #2b8aff;
-  font-weight: 500;
 }
 
 .item-news__header {
