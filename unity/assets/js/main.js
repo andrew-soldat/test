@@ -114,34 +114,24 @@ $('.main-slider-news__wrapper').slick({
 	autoplaySpeed: 5000,
 	responsive: [
 		{
-			breakpoint: 1250,
-			settings: {
-				arrows: false,
-				dots: true
-			}
+			breakpoint: 1250
 		},
 		{
 			breakpoint: 992,
 			settings: {
-				slidesToShow: 3,
-				arrows: false,
-				dots: true
+				slidesToShow: 3
 			}
 		},
 		{
 			breakpoint: 768,
 			settings: {
-				slidesToShow: 2,
-				arrows: false,
-				dots: true
+				slidesToShow: 2
 			}
 		},
 		{
 			breakpoint: 565,
 			settings: {
-				slidesToShow: 1,
-				arrows: false,
-				dots: true
+				slidesToShow: 1
 			}
 		},
 	]

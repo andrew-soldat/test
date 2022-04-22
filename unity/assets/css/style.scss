@@ -1246,9 +1246,9 @@ h6 {
    }
 
    &__title {
-      // flex: 1 1 auto;
       color: #343434;
       font-size: 18px;
+		font-weight: 600;
       transition: all 0.3s ease 0s;
 
       &:hover {
@@ -1260,7 +1260,6 @@ h6 {
 		margin: 0px 0px 5px 0px;
       font-size: 14px;
       color: #2b8aff;
-      // font-weight: 500;
    }
 }
 .item-news {
@@ -1378,10 +1377,16 @@ h6 {
 			display: flex;
 		}
 
-		.slick-dots button {
-			border: 1px solid #2b8aff;
-		}
+		@media (max-width: 1250px) {
+			padding: 0 15px;
 
+			.slick-prev {
+				left: 5px;
+			}
+			.slick-next {
+				right: 5px;
+			}
+		}
 	}
 }
 .photo-slider {

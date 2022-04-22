@@ -1455,6 +1455,7 @@ h6 {
 .news__title {
   color: #343434;
   font-size: 18px;
+  font-weight: 600;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -1606,8 +1607,16 @@ h6 {
   display: flex;
 }
 
-.main-slider-news__wrapper .slick-dots button {
-  border: 1px solid #2b8aff;
+@media (max-width: 1250px) {
+  .main-slider-news__wrapper {
+    padding: 0 15px;
+  }
+  .main-slider-news__wrapper .slick-prev {
+    left: 5px;
+  }
+  .main-slider-news__wrapper .slick-next {
+    right: 5px;
+  }
 }
 
 .photo-slider {
