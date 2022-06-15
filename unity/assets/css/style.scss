@@ -1926,10 +1926,6 @@ a.footer__text:hover {
 			}
 		}
 	}
-
-	&__middle {
-		height: 100%;
-	}
 }
 .item-main-news {
 	display: flex;
@@ -1940,11 +1936,21 @@ a.footer__text:hover {
 	height: 100%;
 
 	&_big {
-		padding: 68% 0px 0px 0px;
+		height: 500px;
 	}
 
 	@media (max-width: 768px) {
-		padding: 50% 0px 0px 0px;
+		height: 300px;
+	}
+
+	img {
+		transition: all 0.5s ease 0s;
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
 	}
 
 	&__info {
