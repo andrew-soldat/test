@@ -1,8 +1,8 @@
 let a = 0;
 $(window).scroll(function () {
-   var oTop = $('.number__item').offset().top - window.innerHeight;
+   var oTop = $('.number').offset().top - window.innerHeight;
    if (a == 0 && $(window).scrollTop() > oTop) {
-      $('.number__count').each(function () {
+      $('.count').each(function () {
          var $this = $(this),
             countTo = $this.attr('data-count');
          $({

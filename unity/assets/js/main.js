@@ -292,6 +292,7 @@ $(".photo-slider__nav").slick({
 		},
 	]
 });
+
 $(function () {
 	$(".map__link").hover(function(e) {
 		$($(this).attr('data-class')).toggleClass('_active');

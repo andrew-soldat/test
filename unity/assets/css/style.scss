@@ -176,7 +176,7 @@ h6 {
       display: block;
     }
   }
-  
+
   @media (max-width: 992px) {
     color: #2B8AFF;
 
@@ -198,7 +198,7 @@ h6 {
   background-color: #192A82;
   border-radius: 8px;
   transition: all 0.3s ease 0s;
-  
+
   &:hover {
     box-shadow: 0px 4px 32px rgba(0, 38, 202, 0.2);
 
@@ -206,7 +206,7 @@ h6 {
 }
 .section {
   padding: 75px 0px;
-  
+
   @media (max-width: 768px) {
     padding: 40px 0px;
   }
@@ -222,6 +222,7 @@ h6 {
   height: 50px;
   background-color: #ffffff;
   border-radius: 50%;
+  border: none;
   box-shadow: 0px 30px 60px 0px rgba(32, 56, 85, 0.15);
   transition: all 0.3s ease 0s;
   font-size: 0;
@@ -277,7 +278,7 @@ h6 {
 }
 .slick-next {
   right: -50px;
-  
+
   &:before {
     transform: rotate(135deg);
   }
@@ -555,6 +556,10 @@ h6 {
     flex: 0 1 40%;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 1200px) {
+      height: auto;
+    }
   }
 
   &__row {
@@ -628,17 +633,15 @@ h6 {
   }
 
   &__text {
+    display: none;
     margin: 16px 0px 0px 0px;
     font-size: 14px;
     color: #192A82;
     font-weight: 500;
   }
 
-  &__text {
-    display: none;
-  }
-
   @media (max-width: 1200px) {
+    height: auto;
     min-height: 300px;
 
     &__photo {
@@ -672,7 +675,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     @media (max-width: 768px) {
       display: block;
     }
@@ -741,10 +744,11 @@ h6 {
     }
   }
 
-  &__content {
+  &__count {
     margin: 0px 0px 16px 0px;
     font-size: 32px;
     color: #2b8aff;
+    font-weight: 700;
   }
 
   &__text {
@@ -769,18 +773,11 @@ h6 {
         border-bottom: none;
       }
     }
-    //&__content {
-    //  margin: 0px auto 30px;
-    //}
-    //
-    //&__text {
-    //  width: 100%;
-    //}
   }
 }
 .events {
   &__head {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 20px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -979,7 +976,7 @@ h6 {
       color: #2B8AFF;
       box-shadow: 0px 4px 32px 0px #0026CA33;
     }
-    
+
     @media (max-width: 480px) {
       font-size: 14px;
     }
@@ -1031,8 +1028,11 @@ h6 {
     }
   }
 }
-
 .we-now {
+  &__title {
+    margin: 0px 0px 30px 0px;
+  }
+
   &__body {
     display: flex;
     position: relative;
@@ -1088,7 +1088,9 @@ h6 {
   }
 }
 .our-history {
-
+  &__title {
+    margin: 0px 0px 30px 0px;
+  }
   &__body {
     display: flex;
     flex-wrap: wrap;
@@ -1193,6 +1195,11 @@ h6 {
   &__text {
     font-size: 16px;
     font-weight: 500;
+  }
+}
+.events-cities {
+  &__title {
+    margin: 0px 0px 30px 0px;
   }
 }
 .cities {
@@ -1398,6 +1405,153 @@ h6 {
     }
   }
 }
+.list-news {
+  margin: 0 -10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__column {
+    flex: 0 1 50%;
+    padding: 0px 10px 20px;
+
+    &_latest {
+      flex: 0 1 100%;
+    }
+    
+    @media (max-width: 768px) {
+      flex: 0 1 100%;
+    }
+  }
+}
+.news-promo {
+  padding: 20px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
+  border-radius: 16px;
+  height: 100%;
+
+  @media (min-width: 768px) {
+    &_latest {
+      flex-direction: row;
+
+      .news-promo__photo {
+        flex: 0 1 49%;
+        padding: 25% 0px 0px 0px;
+      }
+
+      .news-promo__info {
+        flex: 0 1 51%;
+        margin: 0px 0px 0px 30px;
+        max-height: 320px;
+
+        &:before {
+          top: 300px;
+        }
+      }
+
+      .news-promo__title {
+        margin: 0px 0px 20px 0px;
+
+        a {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  &__photo {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding: 48% 0px 0px 0px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.5s ease 0s;
+    }
+    
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__info {
+    margin: 20px 0px 0px 0px;
+    height: 100%;
+    max-height: 200px;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content:'';
+      height: 20px;
+      background-image: linear-gradient(180deg,rgba(255,255,255,.4) 0,#fff 100%);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 180px;
+    }
+
+    //@media (max-width: 565px) {
+    //  max-height: 250px;
+    //
+    //  &:before {
+    //    top: 230px;
+    //  }
+    //}
+  }
+
+  &__date {
+    margin: 0px 0px 10px 0px;
+    font-size: 14px;
+    color: #2B8AFF;
+    font-weight: 500;
+  }
+
+  &__title {
+
+    a {
+      color: #192A82;
+      font-size: 18px;
+      font-weight: 600;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        color: #2B8AFF;
+      }
+    }
+  }
+
+  &__summary {
+    margin: 20px 0px 0px 0px;
+  }
+  
+  @media (max-width: 565px) {
+    padding: 15px;
+
+    &__info {
+      margin: 10px 0px 0px 0px;
+      max-height: none;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &__summary {
+      display: none;
+    }
+  }
+}
 .item-news {
 
   &__header {
@@ -1518,16 +1672,21 @@ h6 {
   }
 }
 .photo-slider {
-  margin: 0 90px 15px;
+  margin: 30px 90px;
 
   @media (max-width: 768px) {
-    margin: 0 0 15px;
+    margin: 30px 0;
+  }
+
+  &__main img {
+    margin: 0;
   }
 
   &__img {
     margin: 10px 5px 0px;
 
     img {
+      margin: 0;
       max-width: 100%;
     }
   }
@@ -1855,13 +2014,17 @@ h6 {
     }
   }
 
-  &__text {
+  &__link {
     display: block;
     margin: 0px 0px 30px 30px;
     color: #343434;
     font-size: 18px;
     font-weight: 600;
     transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: #005fd3;
+    }
   }
 
   &__image {
@@ -1897,14 +2060,11 @@ h6 {
       padding: 10px 10px 0;
     }
 
-    &__text {
+    &__link {
       margin: 0px 0px 20px 30px;
       font-size: 16px;
     }
   }
-}
-a.contacts__text:hover {
-  color: #005fd3;
 }
 .footer {
   padding: 50px 0px 30px;
@@ -1948,18 +2108,15 @@ a.contacts__text:hover {
     color: #192A82;
   }
 
-  &__text {
+  &__link {
     color: #2B8AFF;
     font-size: 14px;
     font-weight: 500;
-
-    &_link {
-      transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 
       &:hover {
         color: #005fd3;
       }
-    }
   }
 
   &__bottom {
@@ -2075,5 +2232,3 @@ a.contacts__text:hover {
     }
   }
 }
-
-
