@@ -17,70 +17,53 @@
    <body>
       <div class="wrapper">
          <header class="header">
-            <div class="container">
-               <div class="header__body">
-                  <a href="index.html" class="logo"
-                     ><img src="./assets/images/logo.png" alt="Логотип" />
-                     <span
-                        >Объединенная отраслевая профсоюзная организация
-                        работников налоговых и других финансовых органов
-                        Белорусского профессионального союза работников
-                        государственных и других учреждений</span
-                     ></a
-                  >
+            <div class="header__top">
+               <div class="container">
+                  <a href="index.html" class="header__logo" data-da=".header__nav,768,1">
+                     <img src="./assets/images/logo.png" alt="Логотип" />
+                     <span>Объединенная отраслевая профсоюзная организация <br>
+								работников налоговых и других финансовых органов <br>
+								Белорусского профессионального союза работников государственных и других
+								учреждений
+							</span>
+                  </a>
+               </div>
+            </div>
+            <div class="header__bottom">
+               <div class="container">
                   <nav class="header__nav">
                      <ul class="header__list">
                         <li>
-                           <a href="aboutus.html" class="header__link link"
-                              >О нас</a
-                           >
+                           <a href="aboutus.html" class="header__link link">О нас</a>
                         </li>
                         <li>
-                           <a
-                              href="events.html"
-                              class="header__link link active"
-                              >Мероприятия</a
-                           >
+                           <a href="events.html" class="header__link link">События</a>
                         </li>
                         <li>
-                           <a href="news.html" class="header__link link"
-                              >Новости</a
-                           >
+                           <a href="documents.html" class="header__link link">Документы</a>
                         </li>
                         <li>
-                           <a href="documents.html" class="header__link link"
-                              >Документы</a
-                           >
-                        </li>
-                        <li>
-                           <a href="contacts.html" class="header__link link"
-                              >Контакты</a
-                           >
+                           <a href="contacts.html" class="header__link link">Контакты</a>
                         </li>
                      </ul>
+                     <div class="header__burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </div>
                   </nav>
-                  <div class="header__overlay"></div>
-                  <div class="header__burger">
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                  </div>
                </div>
             </div>
          </header>
-         <main class="content">
-            <div data-speed="20" class="content__bg content__bg_1"></div>
-            <div data-speed="70" class="content__bg content__bg_2"></div>
-            <div data-speed="140" class="content__bg content__bg_3"></div>
-
-            <div class="last-news section">
+         <main>
+            <section class="last-news section">
                <div class="container">
                   <div class="last-news__body">
                      <div class="last-news__content">
                         <div class="last-news__label">Минск</div>
                         <div class="last-news__article">
                            <div class="last-news__header">
-                              <a href="item-news.html" class="last-news__title">Поход с палатками</a>
+                              <h4><a href="item-news.html" class="last-news__title">Поход с палатками</a></h4>
                               <div class="last-news__date">20.05.2021</div>
                            </div>
                            <div class="last-news__text">
@@ -101,10 +84,7 @@
                               </p>
                            </div>
                            <div class="last-news__image">
-                              <img
-                                 src="./assets/images/main-new-region.png"
-                                 alt=""
-                              />
+                              <img src="./assets/images/main-new-region.png" alt="" />
                            </div>
                         </div>
                      </div>
@@ -116,247 +96,192 @@
                      </div>
                   </div>
                </div>
-            </div>
-            <section class="news bg section">
+            </section>
+            <section class="events section bg-blue-light">
                <div class="container">
-                  <h2 class="title">
-                     <span>Другие мероприятия</span>
-                  </h2>
-                  <div class="news__slider">
-                     <div>
-                        <div class="news__slide">
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/01.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/02.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/03.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/04.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/05.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/06.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/07.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/08.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                        </div>
+                  <div class="events__body">
+                     <div class="events__head">
+                        <h2 class="title">
+                           <span class="title__text"><span>Другие мероприятия</span></span>
+                        </h2>
                      </div>
-                     <div>
-                        <div class="news__slide">
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/01.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/02.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/03.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/04.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/05.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/06.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
-                           <div class="news__item">
-                              <a href="" class="news__image">
-                                 <img
-                                    src="./assets/images/photo-news/07.jpg"
-                                    alt="Фото"
-                                 />
-                              </a>
-										<div class="news__date">23.04.2021</div>
-                              <a href="" class="news__title"
-                                 >Конкурс творчества</a
-                              >
-                           </div>
+                     <section class="slider-news">
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
                         </div>
-                     </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Актив инспекции МНС по Слонимскому району возложил цветы к памятнику погибшим воинам</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Актив инспекции МНС по Слонимскому району возложил цветы к памятнику погибшим воинам</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Актив инспекции МНС по Слонимскому району возложил цветы к памятнику погибшим воинам</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                        <div class="slider-news__slide">
+                           <a href="#" class="news-card">
+                              <div class="news-card__photo">
+                                 <img src="./assets/images/photo-news/06.jpg" alt="Фото"/>
+                              </div>
+                              <div class="news-card__date">23.04.2021</div>
+                              <h6 class="news-card__title">Конкурс творчества</h6>
+                              <div class="news-card__geo">Минская область</div>
+                           </a>
+                        </div>
+                     </section>
                   </div>
                </div>
             </section>
          </main>
-         <footer class="footer">
+         <footer class="footer bg-blue">
             <div class="container">
-               <div class="footer__contacts">
-                  <div class="footer__column">
-                     <div class="footer__title footer__title_address">
-                        Адрес:
+               <div class="footer__top">
+                  <a href="index.html" class="footer__logo">
+                     <img src="./assets/images/logo.png" alt="Логотип" />
+                     <span>Объединенная отраслевая профсоюзная организация <br>
+								работников налоговых и других финансовых органов <br>
+								Белорусского профессионального союза работников <br>
+								государственных и других учреждений
+							</span>
+                  </a>
+                  <div class="footer__contacts">
+                     <div class="footer__row">
+                        <div class="footer__title">Адрес:</div>
+                        <a href="https://yandex.by/maps/-/CCURUUDt0A" target="_blank" class="footer__link">220126, г. Минск пр. Пушкина, 11</a>
                      </div>
-                     <div class="footer__text">
-                        220126, г. Минск пр. Пушкина, 11
+                     <div class="footer__row">
+                        <div class="footer__title">Тел/Факс:</div>
+                        <a href="tel:375172701191" class="footer__link">+375 17 270 11 91</a>
                      </div>
-                  </div>
-                  <div class="footer__column">
-                     <div class="footer__title footer__title_phone">
-                        Тел/Факс:
+                     <div class="footer__row">
+                        <div class="footer__title">E-mail:</div>
+                        <a href="mailto:profsouz_edinstvo@tut.by" class="footer__link">profsouz_edinstvo@tut.by</a>
                      </div>
-                     <a href="tel:375172701191" class="footer__text"
-                        >+375 17 270 11 91
-                     </a>
-                  </div>
-                  <div class="footer__column">
-                     <div class="footer__title footer__title_mail">E-mail:</div>
-                     <a
-                        href="mailto:profsouz_edinstvo@tut.by"
-                        class="footer__text"
-                        >profsouz_edinstvo@tut.by</a
-                     >
                   </div>
                </div>
-               <a href="" class="logo logo_footer"
-                  ><img src="./assets/images/logo.png" alt="Логотип" />
-                  <span
-                     >Объединенная отраслевая профсоюзная организация работников
-                     налоговых и других финансовых органов Белорусского
-                     профессионального союза работников государственных и других
-                     учреждений</span
-                  ></a
-               >
-               <div class="footer__developer">
-                  <span>Разработка сайта:</span
-                  ><a href="info-center.by"
-                     >«Информационно-издательский центр по налогам и сборам»</a
-                  >
+               <div class="footer__bottom">
+                  <div class="footer__developer">
+                     <div>Разработка сайта:</div><a href="info-center.by">«Информационно-издательский центр по налогам и сборам»</a>
+                  </div>
+                  <div class="footer__copyright">2022, Все права защищены</div>
                </div>
             </div>
          </footer>

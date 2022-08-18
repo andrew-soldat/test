@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-         rel="stylesheet"
-      />
-      <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
-      <link rel="stylesheet" href="./assets/css/style.css" />
-		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-		<link rel="icon" href="./favicon.ico" type="image/x-icon">
-      <title>Единство</title>
+	  <meta charset="UTF-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	  <link rel="preconnect" href="https://fonts.gstatic.com" />
+	  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+	  <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
+	  <link rel="stylesheet" href="./assets/css/style.css" />
+	  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+	  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+      <title>Наши события</title>
    </head>
    <body>
 		<div class="wrapper">
 			<header class="header">
-				<div class="container">
-					<div class="header__body">
-						<a href="index.html" class="logo"
-							><img src="./assets/images/logo.png" alt="Логотип" />
-							<span
-								>Объединенная отраслевая профсоюзная организация работников
-								налоговых и других финансовых органов Белорусского
-								профессионального союза работников государственных и других
-								учреждений</span
-							></a
-						>
+				<div class="header__top">
+					<div class="container">
+						<a href="index.html" class="header__logo" data-da=".header__nav,768,1">
+							<img src="./assets/images/logo.png" alt="Логотип" />
+							<span>Объединенная отраслевая профсоюзная организация <br>
+								работников налоговых и других финансовых органов <br>
+								Белорусского профессионального союза работников государственных и других
+								учреждений
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="container">
 						<nav class="header__nav">
 							<ul class="header__list">
 								<li>
-									<a href="aboutus.html" class="header__link link"
-										>О нас</a
-									>
+									<a href="aboutus.html" class="header__link link">О нас</a>
 								</li>
 								<li>
-									<a href="events.html" class="header__link link active"
-										>Мероприятия</a
-									>
-								</li>
-								<li>
-									<a href="news.html" class="header__link link">Новости</a>
+									<a href="events.html" class="header__link link">События</a>
 								</li>
 								<li>
 									<a href="documents.html" class="header__link link">Документы</a>
@@ -50,26 +43,22 @@
 									<a href="contacts.html" class="header__link link">Контакты</a>
 								</li>
 							</ul>
+							<div class="header__burger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
 						</nav>
-						<div class="header__overlay"></div>
-						<div class="header__burger">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
 					</div>
 				</div>
 			</header>
-			<main class="content">
-				<div data-speed="20" class="content__bg content__bg_1"></div>
-				<div data-speed="70" class="content__bg content__bg_2"></div>
-				<div data-speed="140" class="content__bg content__bg_3"></div>
+			<main>
 				<section class="main section">
 					<div class="container">
 						<div class="main__body">
 							<div class="main__content">
 								<div class="main__subtitle">Профсоюз «Единство»</div>
-								<h1 class="main__title">Наши мероприятия</h1>
+								<h1 class="main__title">Наши события</h1>
 								<div class="main__text">
 									Разработана и претворяется в жизнь «Программа
 								развития физической культуры, туризма и культуры».
@@ -85,10 +74,10 @@
 						</div>
 					</div>
 				</section>
-				<section class="events bg section">
+				<section class="events-cities bg section">
 					<div class="container">
-						<h2 class="events__title title">
-							<span>Наши мероприятия</span>
+						<h2 class="events-cities__title title">
+							<span>Наши события</span>
 						</h2>
 						<div class="events__body">
 							<div class="events__cities cities">
@@ -168,42 +157,37 @@
 					</div>
 				</section>
 			</main>
-			<footer class="footer">
+			<footer class="footer bg-blue">
 				<div class="container">
-					<div class="footer__contacts">
-						<div class="footer__column">
-							<div class="footer__title footer__title_address">Адрес:</div>
-							<div class="footer__text">
-								220126, г. Минск пр. Пушкина, 11
+					<div class="footer__top">
+						<a href="index.html" class="footer__logo">
+							<img src="./assets/images/logo.png" alt="Логотип" />
+							<span>Объединенная отраслевая профсоюзная организация <br>
+								работников налоговых и других финансовых органов <br>
+								Белорусского профессионального союза работников <br>
+								государственных и других учреждений
+							</span>
+						</a>
+						<div class="footer__contacts">
+							<div class="footer__row">
+								<div class="footer__title">Адрес:</div>
+								<a href="https://yandex.by/maps/-/CCURUUDt0A" target="_blank" class="footer__link">220126, г. Минск пр. Пушкина, 11</a>
+							</div>
+							<div class="footer__row">
+								<div class="footer__title">Тел/Факс:</div>
+								<a href="tel:375172701191" class="footer__link">+375 17 270 11 91</a>
+							</div>
+							<div class="footer__row">
+								<div class="footer__title">E-mail:</div>
+								<a href="mailto:profsouz_edinstvo@tut.by" class="footer__link">profsouz_edinstvo@tut.by</a>
 							</div>
 						</div>
-						<div class="footer__column">
-							<div class="footer__title footer__title_phone">Тел/Факс:</div>
-							<a href="tel:375172701191" class="footer__text"
-								>+375 17 270 11 91
-							</a>
-						</div>
-						<div class="footer__column">
-							<div class="footer__title footer__title_mail">E-mail:</div>
-							<a href="mailto:profsouz_edinstvo@tut.by" class="footer__text"
-								>profsouz_edinstvo@tut.by</a
-							>
-						</div>
 					</div>
-					<a href="" class="logo logo_footer"
-						><img src="./assets/images/logo.png" alt="Логотип" />
-						<span
-							>Объединенная отраслевая профсоюзная организация работников
-							налоговых и других финансовых органов Белорусского
-							профессионального союза работников государственных и других
-							учреждений</span
-						></a
-					>
-					<div class="footer__developer">
-						<span>Разработка сайта:</span
-						><a href="info-center.by"
-							>«Информационно-издательский центр по налогам и сборам»</a
-						>
+					<div class="footer__bottom">
+						<div class="footer__developer">
+							<div>Разработка сайта:</div><a href="info-center.by">«Информационно-издательский центр по налогам и сборам»</a>
+						</div>
+						<div class="footer__copyright">2022, Все права защищены</div>
 					</div>
 				</div>
 			</footer>
