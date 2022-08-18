@@ -227,7 +227,7 @@ h6 {
   transition: all 0.3s ease 0s;
   font-size: 0;
   position: absolute;
-  top: 43%;
+  top: calc(50% - 25px);
   z-index: 2;
 
   &:before {
@@ -1436,54 +1436,47 @@ h6 {
   }
 }
 .item-news {
-
-  &__header {
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: #93C1F9;
-
-    @media (max-width: 565px) {
-      display: block;
-      padding: 10px;
+  &__body {
+    padding: 40px 40px 10px;
+    background-color: #ECF4FF;
+    box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    
+    @media (max-width: 768px) {
+      padding: 40px 15px 0px;
     }
   }
 
+  &__header {
+    padding: 0px 0px 10px 0px;
+    border-bottom: 2px solid #192A82;
+  }
+
   &__title {
-    margin: 0px 30px 0px 0px;
-    flex: 1 1 auto;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 600;
 
     @media (max-width: 565px) {
-      display: block;
       font-size: 20px;
-      margin: 0px 0px 5px 0px;
     }
   }
 
   &__date {
-    color: #ffffff;
-    font-size: 18px;
-
-    @media (max-width: 565px) {
-      font-size: 16px;
-    }
+    margin: 20px 0px 0px 0px;
+    color: #2B8AFF;
+    font-size: 16px;
   }
 
   &__content {
-    padding: 20px 30px;
-    background-color: #FAFAFA;
-
-    @media (max-width: 565px) {
-      padding: 10px;
-    }
+    padding: 20px 0px;
 
     p {
+      width: 100%;
+      max-width: 900px;
       font-size: 16px;
       text-align: justify;
-      margin: 15px 0;
+      margin: 15px auto;
     }
 
     img {
@@ -1496,7 +1489,7 @@ h6 {
 
   &__video {
     margin: 30px auto;
-    max-width: 800px;
+    max-width: 900px;
     position: relative;
     aspect-ratio: 16/9;
 
@@ -1512,7 +1505,7 @@ h6 {
 
   &__photo {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 30px auto;
 
     img {
@@ -1524,7 +1517,7 @@ h6 {
   &__back {
     display: block;
     padding: 0px 0px 0px 20px;
-    margin: 20px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
     font-size: 16px;
     color: #343434;
     font-weight: 500;
@@ -1574,6 +1567,10 @@ h6 {
     }
   }
 
+  &__nav {
+    position: relative;
+  }
+
   .slick-dots button {
     background-color: #93c1f9;
   }
@@ -1582,6 +1579,29 @@ h6 {
     background-color: #2B8AFF;
   }
 
+  .slick-arrow {
+    top: calc(50% - 25px - 10px);
+  }
+
+  .slick-next {
+    right: -65px;
+  }
+
+  .slick-prev {
+    left: -65px;
+  }
+  
+  @media (max-width: 1200px) {
+    margin: 30px 0px;
+
+    .slick-next {
+      right: -35px;
+    }
+
+    .slick-prev {
+      left: -35px;
+    }
+  }
 }
 .documents {
 
