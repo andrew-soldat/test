@@ -281,7 +281,8 @@ $(".photo-slider__nav").slick({
 		{
 			breakpoint: 768,
 			settings: {
-				slidesToShow: 3
+				slidesToShow: 3,
+				arrows: false
 			}
 		},
 		{
