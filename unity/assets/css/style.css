@@ -213,6 +213,122 @@ h6 {
   }
 }
 
+.info-banner {
+  margin-top: 75px;
+  display: block;
+}
+@media (max-width: 768px) {
+  .info-banner {
+    margin-top: 40px;
+  }
+}
+
+.info-banner-block {
+  margin-top: 75px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
+}
+@media (max-width: 768px) {
+  .info-banner-block {
+    margin-top: 40px;
+  }
+}
+.info-banner-block__info {
+  margin: 0px 45px 0px 0px;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+.info-banner-block__img {
+  margin: 0px 45px 0px 0px;
+  width: 100px;
+}
+.info-banner-block__img img {
+  max-width: 100%;
+  height: auto;
+}
+.info-banner-block__title {
+  width: min(100%, 460px);
+  font-size: 22px;
+  color: #343434;
+  font-weight: 500;
+}
+.info-banner-block__title span {
+  color: #2B8AFF;
+}
+.info-banner-block__links {
+  display: flex;
+  align-items: center;
+}
+.info-banner-block__download {
+  margin: 0px 45px 0px 0px;
+  color: #343434;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-banner-block__download img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.info-banner-block__download:hover {
+  color: #192A82;
+}
+.info-banner-block__phone {
+  color: #2B8AFF;
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.3s ease 0s;
+}
+.info-banner-block__phone img {
+  display: inline-block;
+  margin-right: 10px;
+}
+.info-banner-block__phone:hover {
+  color: #192A82;
+}
+@media (max-width: 992px) {
+  .info-banner-block {
+    flex-direction: column;
+  }
+  .info-banner-block__info {
+    margin: 0px 0px 30px 0px;
+  }
+  .info-banner-block__title {
+    width: 100%;
+  }
+}
+@media (max-width: 565px) {
+  .info-banner-block {
+    padding: 30px 15px;
+  }
+  .info-banner-block__title {
+    font-size: 16px;
+  }
+  .info-banner-block__img {
+    margin: 0px 15px 0px 0px;
+  }
+  .info-banner-block__download {
+    margin: 0px 0px 30px 0px;
+  }
+  .info-banner-block__links {
+    flex-direction: column;
+  }
+  .info-banner-block__phone {
+    color: #2B8AFF;
+    font-size: 18px;
+  }
+}
+
 .bg-blue {
   background-color: #D8E9FF;
 }
