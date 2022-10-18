@@ -211,6 +211,135 @@ h6 {
     padding: 40px 0px;
   }
 }
+.info-banner {
+  margin-top: 75px;
+  display: block;
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+}
+.info-banner-block {
+  margin-top: 75px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0px 30px 60px rgb(32 56 85 / 15%);
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+
+  &__info {
+    margin: 0px 45px 0px 0px;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    margin: 0px 45px 0px 0px;
+    width: 100px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    width: min(100%, 460px);
+    font-size: 22px;
+    color: #343434;
+    font-weight: 500;
+
+    span {
+      color: #2B8AFF;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__download {
+    margin: 0px 45px 0px 0px;
+    color: #343434;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      color: #192A82;
+    }
+  }
+
+  &__phone {
+    color: #2B8AFF;
+    font-size: 22px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all 0.3s ease 0s;
+
+    img {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    &:hover {
+      color: #192A82;
+    }
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+
+    &__info {
+      margin: 0px 0px 30px 0px;
+    }
+
+    &__title {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 565px) {
+    padding: 30px 15px;
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__img {
+      margin: 0px 15px 0px 0px;
+    }
+
+    &__download {
+      margin: 0px 0px 30px 0px;
+    }
+
+    &__links {
+      flex-direction: column;
+    }
+
+    &__phone {
+      color: #2B8AFF;
+      font-size: 18px;
+    }
+  }
+}
 .bg-blue {
   background-color: #D8E9FF;
 }
