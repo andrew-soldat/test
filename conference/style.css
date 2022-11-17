@@ -7,6 +7,7 @@
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -365,7 +366,7 @@ main {
   flex: 1 1 auto;
   height: 2px;
   background-color: #53998A;
-  box-shadow: 0 5px 20px black;
+  box-shadow: 0 5px 20px rgb(0, 0, 0);
 }
 .item-program__text {
   flex: 1 1 auto;
@@ -386,7 +387,7 @@ main {
 }
 .item-program__text:before, .item-program__text:after {
   content: "";
-  box-shadow: 0 5px 20px black;
+  box-shadow: 0 5px 20px rgb(0, 0, 0);
   background-color: #53998A;
   position: absolute;
 }
@@ -789,7 +790,7 @@ main {
   transition: all 0.8s ease 0s;
 }
 .popup__close:hover {
-  color: #00000085;
+  color: rgba(0, 0, 0, 0.5215686275);
 }
 .popup__content {
   max-width: 550px;
@@ -858,7 +859,7 @@ main {
 }
 .form__input._error {
   box-shadow: 0 0 2px red;
-  border-color: #f54444;
+  border-color: rgb(245, 68, 68);
 }
 .form__placeholder {
   padding: 0 3px;
@@ -882,7 +883,7 @@ main {
   display: none;
   padding: 10px;
   margin: 0px 0px 20px 0px;
-  background-color: #006c4f38;
+  background-color: rgba(0, 108, 79, 0.2196078431);
   border-left: 3px solid #006C4F;
   font-size: 18px;
   color: #000;
@@ -901,14 +902,16 @@ main {
   font-size: 20px;
   color: #fefefe;
   background-color: #006C4F;
-  box-shadow: 0px 2px 5px 0px #00000040;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2509803922);
   transition: all 0.3s ease 0s;
 }
 .form__button:hover {
   background-color: #188B30;
-  box-shadow: 0px 4px 10px 0px #00000040;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
 .form__line._error > .form__text-error {
   display: block;
 }
+
+/*# sourceMappingURL=style.css.map */
